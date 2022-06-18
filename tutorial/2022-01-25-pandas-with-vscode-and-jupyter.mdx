@@ -1,0 +1,85 @@
+---
+title: Data anlaysis with Pandas using Jupyter in VSCode
+author: Vishnu Balaji V B
+featured: true
+description:
+  A tutorial describing how to setup Jupyter in VSCode and work with Pandas API
+image: /img/tutorial/shared/og-pandas-vscode-jupyter.png
+---
+
+import Gist from "react-gist"
+
+### Objective
+
+Install VS Code extension for Python and Jupyter and analyse sales data using
+Pandas.
+
+### About Pandas, Jupyter and Anaconda
+
+#### Pandas
+
+Pandas is a library written for Python to perform data manipulation and
+analysis. It offers data structures and operations for manipulating numerical
+tables and time series.
+
+#### Jupyter notebook
+
+The Jupyter Notebook is a web application for creating and sharing computational
+documents. It offers a simple, streamlined, document-centric experience.
+
+#### Anaconda
+
+Anaconda is a distribution of Python and R for package management and
+deployment. The distribution includes data-science packages for easy
+installation and management.
+
+### Setup the development environment
+
+- Download and install
+  [Anaconda Individual Edition](https://www.anaconda.com/products/individual)
+- Download and install [Visual Studio Code](https://code.visualstudio.com/)
+- Open the Anaconda Prompt and create a new environment by performing the
+  following command replacing _**sales**_ with the name you
+  want.<br/>`conda create --name sales`
+- To activate the environment you created, perform the following command
+  replacing _**sales**_ with the name you used.<br/> `conda activate sales`
+- Once activated, you can notice that your prompt changed from **(base)** to
+  your environment name. This indicates that your environment is activated.
+- To install pandas, perform `conda install pandas`
+- To install ipykernel, perform `conda activate ipykernel`. The ipykernel aka
+  IPython kernel is the execution backend for the Jupyter and an essential
+  component.
+- Now, open VSCode and install the _**Jupyter**_ extension from the
+  marketplace/extensions. To open extensions, either press Ctrl+Shift+X for
+  shortcut or click on the extensions icon on the left of VSCode and search
+  _**Jupyter**_. Click on the first result that appears and install.<br/>
+  ![VSCode Marketplace](/img/tutorial/2022-01-25/vscode-marketplace-jupyter.PNG)
+- Create a new jupyter notebook by either creating a new .ipynb file in your
+  workspace or by running the following command from the Command Palette
+  (Ctrl+Shift+P) and save it.<br/> `Jupyter: Create New Jupyter Notebook`
+- Click _**Select Kernel**_ present on top-right and choose the appropriate
+  kernel that is of the same name as the conda environment you created.
+  ![Kernel Selection](/img/tutorial/2022-01-25/kernel-selection.PNG)
+- Create a file named "sales.csv" in the same location as the jupyter file and
+  copy the data displayed below inorder to work using pandas. The following
+  image shows you how the data in the csv file should be present.
+  ![Data](/img/tutorial/2022-01-25/data-csv.PNG)
+- Try printing 'hello world' in python to verify if it runs properly.
+
+### Code explaination
+
+Below is the entire code for the task mentioned. Let's go through it
+line-by-line.
+
+<Gist id="3f790593fd3a45a4f0898c27572430c7" />
+
+- Pandas library is imported.
+- read_csv() is used to read .csv files such as the `sales.csv` and is stored in
+  data variable.
+- The data variable is printed to view the contents of the file.
+- The max `sales_amount` is found using max(). The output is compared using the
+  equality operator with every single value in the `sales_amount` column to get
+  a list of boolean values to easily retrieve the row that satisfies the
+  condition.
+- Since we need only item and date, we restrict it to those two columns and
+  print the output.

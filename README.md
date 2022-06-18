@@ -2,7 +2,7 @@
 [![Code Style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-green.svg)](https://conventionalcommits.org)
 
-# gigahex.com
+# heapland.com
 
 [This website](https://gigahex.com) is built using
 [Docusaurus 2](https://v2.docusaurus.io/). Pages & components are written in
