@@ -1,0 +1,37 @@
+.title {
+  font-size: var(--font-size-big-2);
+}
+
+.article {
+  display: block;
+  max-width: 100%;
+  color: var(--palette-black);
+}
+
+.article__content {
+  cursor: text;
+  display: block;
+}
+.changelog__image {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 3rem;
+  border-radius: 8px;
+  background: radial-gradient(
+    circle,
+    rgba(126, 114, 217, 1) 0%,
+    rgba(108, 14, 112, 1) 100%
+  );
+}
+.changelog__image > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: var(--ifm-global-border-radius);
+}
+
+@media (max-width: 996px) {
+  .article__content {
+    padding: 0;
+  }
+}

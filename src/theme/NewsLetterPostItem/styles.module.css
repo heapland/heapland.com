@@ -1,0 +1,6 @@
+.newsletter__title {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  color: var(--palette-black);
+}

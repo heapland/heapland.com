@@ -1,0 +1,163 @@
+.navbar__actionbtn {
+  min-width: 240px;
+  font-size: var(--font-size-small);
+}
+.indexCtasGitHubButtonWrapper {
+  display: flex;
+  justify-content: center;
+}
+.indexCtasGitHubButton {
+  overflow: hidden;
+  border: none;
+}
+
+.actionbtns {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand {
+  display: block;
+  height: 30px;
+  width: 120px;
+  margin-right: var(--ifm-navbar-item-padding-horizontal);
+  border: 0;
+  overflow: hidden;
+  text-indent: -999px;
+  white-space: nowrap;
+  background-image: url(/static/img/navbar/logo-min.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+:global(.navbar) {
+  box-shadow: none;
+  background-color: rgba(255, 255, 255, 0.75);
+  padding-bottom: 10px;
+  transition: all 0.4s ease-in-out;
+  transform-origin: center;
+}
+:global(.bg-white) {
+  background-color: var(--palette-rock);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.75);
+}
+:global(.navbar__items) {
+  padding-top: 15px;
+  align-items: flex-start;
+  justify-content: center;
+}
+:global(.navbar__items) > span {
+  margin-top: 6px;
+}
+.inner {
+  margin: 0 auto;
+  padding: 0 var(--ifm-spacing-horizontal);
+}
+
+:global(.navbar__item--slack),
+:global(.navbar__item--github) {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+:global(.navbar__item--slack:before),
+:global(.navbar__item--github:before) {
+  position: relative;
+  content: " ";
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-right: 2px;
+}
+
+:global(.navbar__item--github:before) {
+  background: url("/img/navbar/github.svg") 0 center / 20px 20px no-repeat !important;
+}
+
+:global(.navbar__item--slack:before) {
+  background: url("/img/navbar/slack.svg") 0 center / 18px 18px no-repeat !important;
+}
+
+:global(.navbar-sidebar--show .navbar-sidebar) {
+  min-height: 100vh;
+}
+:global(.navbar-sidebar--show .navbar-sidebar__backdrop) {
+  min-height: 100vh;
+}
+
+/* Remove Algolia shorcuts */
+:global(.DocSearch-Button-Key) {
+  display: none !important;
+}
+
+:global(.navbar__link),
+:global(.dropdown__link) {
+  font-size: var(--ifm-font-size-base);
+}
+
+@media (max-width: 768px) {
+  :global(.DocSearch-Button) {
+    margin: 0 !important;
+  }
+
+  :global(.navbar__brand) {
+    margin: 0;
+  }
+}
+
+@media (max-width: 996px) and (min-width: 768px) {
+  .actionbtn {
+    margin-left: 1.7rem;
+  }
+}
+
+@media (max-width: 996px) {
+  :global(.navbar-sidebar) .brand {
+    margin-left: 1.5rem;
+  }
+  :global(.navbar__items) {
+    justify-content: flex-start;
+  }
+  .actionbtns {
+    flex-direction: row;
+  }
+
+  :global(.navbar__item.navbar__item--slack),
+  :global(.navbar__item.navbar__item--github) {
+    display: none;
+  }
+  :global(.navbar),
+  :global(.navbar-sidebar__brand) {
+    height: 80px;
+  }
+}
+@media (max-width: 776px) {
+  .actionbtns {
+    display: none;
+  }
+}
+
+@media (max-width: 1150px) and (min-width: 996px) {
+  :global(.navbar__link) {
+    --ifm-navbar-item-padding-horizontal: 0.85rem;
+  }
+
+  :global(.navbar__brand) {
+    margin-right: 0.85rem;
+  }
+
+  :global(.DocSearch-Button) {
+    margin-left: 0.85rem;
+  }
+}
+
+@media (min-width: 1740px) {
+  .inner {
+    max-width: var(--ifm-container-width);
+  }
+}

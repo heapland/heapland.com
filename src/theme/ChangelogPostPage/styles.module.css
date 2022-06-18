@@ -1,0 +1,20 @@
+.back__to__allChangeLogs {
+  text-decoration: none;
+  color: var(--palette-gray);
+  display: flex;
+  align-items: center;
+  margin-left: -5px;
+}
+.back__to__allChangeLogs:hover {
+  text-decoration: none;
+  color: var(--palette-black);
+}
+.post__date {
+  color: var(--palette-gray);
+}
+
+@media (max-width: 996px) {
+  .left__info {
+    padding: 20px !important;
+  }
+}

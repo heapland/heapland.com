@@ -1,0 +1,103 @@
+{
+  "name": "gigahex.com",
+  "version": "0.0.1",
+  "private": true,
+  "license": "Apache-2.0",
+  "scripts": {
+    "prestart": "plugins/ts-compile.sh",
+    "start": "docusaurus start",
+    "pre-build": "FORCE=true node scripts/optimise-images.js",
+    "prebuild": "node scripts/optimise-images.js && npm run prestart",
+    "build": "USE_SIMPLE_CSS_MINIFIER=true PWA_SW_CUSTOM= docusaurus build",
+    "swizzle": "docusaurus swizzle",
+    "deploy": "docusaurus deploy",
+    "serve": "docusaurus serve"
+  },
+  "dependencies": {
+    "@docusaurus/core": "2.0.0-alpha.75",
+    "@docusaurus/module-type-aliases": "2.0.0-alpha.75",
+    "@docusaurus/plugin-content-docs": "2.0.0-alpha.75",
+    "@docusaurus/plugin-pwa": "2.0.0-alpha.75",
+    "@docusaurus/preset-classic": "2.0.0-alpha.75",
+    "@tsconfig/docusaurus": "1.0.2",
+    "@types/react-helmet": "6.1.0",
+    "@types/react-router-config": "5.0.1",
+    "@types/react-router-dom": "5.1.6",
+    "@types/react-transition-group": "4.4.0",
+    "@types/resize-observer-browser": "0.1.4",
+    "@types/throttle-debounce": "2.1.0",
+    "clsx": "1.1.1",
+    "date-fns": "2.16.1",
+    "moment": "^2.29.1",
+    "react": "16.14.0",
+    "react-dom": "16.14.0",
+    "react-gist": "^1.2.4",
+    "react-github-btn": "^1.2.1",
+    "react-mailchimp-subscribe": "^2.1.3",
+    "react-player": "^2.9.0",
+    "react-text-loop": "^2.3.0",
+    "react-transition-group": "4.4.1",
+    "throttle-debounce": "3.0.1",
+    "typescript": "4.0.5",
+    "unist-util-visit": "2.0.3"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.18.0",
+    "@typescript-eslint/parser": "^5.18.0",
+    "eslint": "7.13.0",
+    "eslint-config-prettier": "6.15.0",
+    "eslint-config-standard": "16.0.2",
+    "eslint-config-standard-with-typescript": "19.0.1",
+    "eslint-import-resolver-typescript": "2.3.0",
+    "eslint-plugin-babel": "5.3.1",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-prettier": "3.1.4",
+    "eslint-plugin-promise": "4.2.1",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "4.2.0",
+    "eslint-plugin-standard": "4.1.0",
+    "file-loader": "6.2.0",
+    "fork-ts-checker-webpack-plugin": "6.0.3",
+    "glob": "7.1.6",
+    "graceful-fs": "4.2.4",
+    "husky": "4.3.0",
+    "imagemin": "7.0.1",
+    "imagemin-gifsicle": "7.0.0",
+    "imagemin-svgo": "8.0.0",
+    "lint-staged": "10.5.1",
+    "make-dir": "3.1.0",
+    "netlify-plugin-cache": "^1.0.3",
+    "node-fetch": "2.6.1",
+    "prettier": "2.1.2",
+    "rimraf": "3.0.2",
+    "sharp": "0.26.3",
+    "url-loader": "4.1.1",
+    "webpack": "^5.33.2",
+    "webpack-manifest-plugin": "^3.1.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "static/img/**/*": "scripts/check-size-hook.sh"
+  },
+  "resolutions": {
+    "sharp": "0.26.3",
+    "**/@types/react": "16.14.0"
+  }
+}

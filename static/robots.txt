@@ -1,0 +1,6 @@
+User-agent: *
+
+Allow: /sitemap.xml
+Disallow: /__unused/
+Sitemap: https://gigahex.com/sitemap.xml
+Host: https://gigahex.com
