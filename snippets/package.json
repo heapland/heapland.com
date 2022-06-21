@@ -2,14 +2,14 @@
   "name": "snippets",
   "version": "1.0.0",
   "license": "Apache-2.0",
-  "description": "Showcase for integrating Gigahex with your favorite tool",
+  "description": "Showcase for integrating Heapland with your favorite database",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/gigahexhq/gigahex.com.git"
+    "url": "https://github.com/heapland/heapland.com"
   },
   "author": {
-    "name": "Gigahex Team"
+    "name": "Heapland Team"
   },
   "scripts": {
     "auth:go": "go run authenticate/ilp.go",

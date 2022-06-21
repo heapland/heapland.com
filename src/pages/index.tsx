@@ -93,6 +93,17 @@ const Top = () => {
 }
 
 const SecondSection = () => {
+  const [githubStart, setGitHubStart] = React.useState(0)
+  const fetchStart = async () => {
+    const res = await fetch(
+      "https://api.github.com/repos/heapland/heapland/stargazers",
+    )
+    const result = await res.json()
+    setGitHubStart(result.length)
+  }
+  React.useEffect(() => {
+    fetchStart()
+  }, [])
   return (
     <section
       className={clsx(
@@ -160,7 +171,7 @@ const SecondSection = () => {
                 </linearGradient>
               </defs>
             </svg>
-            21
+            {githubStart}
           </div>
         </div>
       </div>
@@ -741,7 +752,7 @@ const GetStartedSec = () => {
 
 const Home = () => {
   const { siteConfig } = useDocusaurusContext()
-  const title = "Gigahex"
+  const title = "Heapland"
 
   return (
     <PageLayout

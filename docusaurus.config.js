@@ -5,7 +5,7 @@ const githubOrgUrl = "https://github.com/heapland/heapland"
 const domain = "heapland.com"
 
 const customFields = {
-  copyright: `Copyright © ${new Date().getFullYear()} Gigahex LLP`,
+  copyright: `Copyright © ${new Date().getFullYear()} Heapland LLP`,
   crunchbaseUrl: "https://www.crunchbase.com/organization/heapland",
   description: "A lightweight data platform built with Apache Spark and Kafka",
   dockerUrl: "https://hub.docker.com/u/heapland",
@@ -49,15 +49,15 @@ function variable() {
 }
 
 const config = {
-  title: "Gigahex - Open Source Data Infrastructure Platform",
-  tagline:
-    "Install and manage Open source Data Infrastructure, for faster development and testing.",
+  title:
+    "Heapland - Open Source Universal interface for all your data services",
+  tagline: "Universal interface for all your data services.",
   url: `https://${customFields.domain}`,
   baseUrl: "/",
   baseUrlIssueBanner: false,
   favicon: "/img/favicon.ico",
-  organizationName: "Gigahex",
-  projectName: "gigahex",
+  organizationName: "heapland",
+  projectName: "heapland",
   customFields,
   onBrokenLinks: "warn",
   plugins: [
@@ -119,7 +119,7 @@ const config = {
       disableSwitch: true,
       respectPrefersColorScheme: false,
     },
-    image: "/img/brand-og.png",
+    image: "/img/logo.png",
     gtag: {
       trackingID: "UA-130638312-1",
       anonymizeIP: true,
@@ -132,8 +132,8 @@ const config = {
     navbar: {
       title: " ",
       logo: {
-        alt: "Gigahex",
-        src: "/img/navbar/gigahex.png",
+        alt: "Heapland",
+        src: "/img/logo.png",
       },
       items: [
         {
@@ -164,7 +164,7 @@ const config = {
     footer: {
       links: [
         {
-          title: "Gigahex",
+          title: "Heapland",
           items: [
             {
               label: "About Us",
