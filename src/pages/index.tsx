@@ -4,80 +4,611 @@ import React from "react"
 // import TextLoop from "react-text-loop"
 // import ReactTypingEffect from "react-typing-effect"
 
-import Button from "@theme/Button"
+// import Button from "@theme/Button"
 import PageLayout from "@theme/PageLayout"
 // import FeaturesTiles from "../component/FeaturesTiles"
 // import ButtonDropdown from "../theme/Button/ButtonDropdown"
 
-import ftrClsCss from "../css/index/footerConsole.module.css"
+// import ftrClsCss from "../css/index/footerConsole.module.css"
 import juCss from "../css/index/jumbotron.module.css"
-import wthCss from "../css/index/watch.module.css"
+// import wthCss from "../css/index/watch.module.css"
 import ftuCss from "../css/index/ftuCard.module.css"
 import seCss from "../css/section.module.css"
 import featTiles from "../css/index/featureTiles.module.css"
+import priCss from "../css/index/pricing.module.css"
 
 type IFeatureCard = {
-  title: string
-  desc: string
-  icon: string
+  title: any
+  icon: any
 }
 
-const FeatureCard = ({ title, desc, icon }: IFeatureCard) => {
+const FeatureCard = ({ title, icon }: IFeatureCard) => {
   return (
-    <div
-      className={clsx(
-        ftuCss.feature__card,
-        "shadow--lw",
-        "margin-bottom--lg",
-        "padding--md",
-      )}
-    >
-      <div className={clsx(ftuCss.feature__card__header, "margin-bottom--md")}>
-        <div className={ftuCss.feature__icon}>
-          <img src={icon} alt="Features tile icon 01" width={40} height={40} />
-        </div>
-        <h2 className={clsx(ftuCss.feature__title, "margin-bottom--none")}>
-          {title}
-        </h2>
+    <div className={clsx(ftuCss.feature__card)}>
+      <h2 className={clsx(ftuCss.feature__title, "margin-bottom--none")}>
+        {title}
+      </h2>
+
+      <div className={ftuCss.feature__icon}>
+        <img src={icon} alt="Features tile icon 01" width={80} height={80} />
       </div>
-      <p className={ftuCss.feature__desc}>{desc}</p>
     </div>
   )
 }
-// odd section
+
 const Top = () => {
-  const dockerCmd = [""]
+  return (
+    <section className={clsx(seCss.section, juCss["hero-section"])}>
+      <div className={clsx(juCss.jumbotron)}>
+        <div className={juCss.jub__left__content}>
+          <div className={juCss.jumbotron__title}>
+            Remote development
+            <br /> on
+            <span className="text__bg__gradient"> your infrastructure</span>
+          </div>
+          <div className={juCss.jumbotron__description}>
+            Offload your team development from local workstations to cloud
+            servers. Onboard developers in minutes. Build, test and compile at
+            the speed of the cloud. Keep your source code and data behind your
+            firewall
+          </div>
 
-  // const { siteConfig } = useDocusaurusContext()
+          <div className={clsx(juCss.jub__action__btns)}>
+            <a href="#" className={juCss.view__repo__btn}>
+              View the Repo
+              <svg
+                width={22}
+                height={22}
+                opacity=".5"
+                style={{ marginLeft: "12px" }}
+                focusable="false"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  color="#fff"
+                  d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+                ></path>
+              </svg>
+            </a>
+            <a href="#" className={juCss.request__demo__btn}>
+              Request Demo
+            </a>
 
-  const ubuntuCmd = [
-    "sudo apt-get install postgresql postgresql-contrib default-jre",
-    "curl -s https://packages.gigahex.com/nix.sh | bash",
-  ]
+            <br />
+            <a href="#" className={juCss.trial__link}>
+              Looking for Coder v1? Click to start a trial.
+            </a>
+          </div>
+        </div>
+        <div className={juCss.jub__right__content}>
+          <img
+            src="https://coder.com/_next/static/media/terminal.e7cc3378.svg"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+  )
+}
 
-  const macCmd = [
-    " brew install postgresql java11",
-    " curl -s https://packages.gigahex.com/mac.sh | bash",
-  ]
+const SecondSection = () => {
+  return (
+    <section
+      className={clsx(
+        seCss.section,
+        seCss["section--center"],
+        ftuCss.second__section,
+      )}
+    >
+      <div className={clsx(ftuCss.second__section__title)}>
+        <div className={clsx(ftuCss.title)}>From the developers of</div>
+        <div className={ftuCss.app__info}>
+          <div className={ftuCss.app__name}>
+            <svg
+              focusable="false"
+              width={30}
+              height={30}
+              viewBox="0 0 30 30"
+              aria-hidden="true"
+            >
+              <path
+                d="M15 0C6.71625 0 0 6.69143 0 14.9467C0 21.5503 4.29844 27.1534 10.2581 29.1292C11.0081 29.2674 11.2838 28.805 11.2838 28.4099C11.2838 28.0539 11.2697 26.876 11.2631 25.627C7.08937 26.5313 6.20906 23.8633 6.20906 23.8633C5.52656 22.136 4.54406 21.6764 4.54406 21.6764C3.18281 20.7488 4.64719 20.7674 4.64719 20.7674C6.15281 20.873 6.94594 22.3079 6.94594 22.3079C8.28375 24.5929 10.455 23.9324 11.3109 23.5503C11.445 22.5844 11.8341 21.9249 12.2634 21.5512C8.93156 21.1738 5.42906 19.8912 5.42906 14.1648C5.42906 12.5328 6.015 11.1997 6.975 10.1525C6.81937 9.77605 6.30562 8.25616 7.12031 6.19726C7.12031 6.19726 8.38031 5.79557 11.2463 7.72929C12.4425 7.39766 13.7259 7.23231 15.0009 7.22578C16.275 7.23138 17.5594 7.39766 18.7584 7.72929C21.6216 5.79557 22.8787 6.19726 22.8787 6.19726C23.6953 8.25616 23.1816 9.77605 23.0259 10.1525C23.9878 11.1988 24.57 12.5328 24.57 14.1648C24.57 19.9052 21.0609 21.1691 17.7206 21.54C18.2587 22.0043 18.7378 22.9132 18.7378 24.3079C18.7378 26.308 18.72 27.9176 18.72 28.4099C18.72 28.8078 18.99 29.274 19.7503 29.1273C25.7072 27.1487 30 21.5484 30 14.9467C30 6.69143 23.2838 0 15 0Z"
+                fill="url(#paint0_linear_140_567)"
+              ></path>
+              <defs>
+                <linearGradient
+                  id="paint0_linear_140_567"
+                  x1="0"
+                  y1="2.4829"
+                  x2="30"
+                  y2="2.4829"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stopColor="#49DE82"></stop>
+                  <stop offset="1" stopColor="#15B4C5"></stop>
+                </linearGradient>
+              </defs>
+            </svg>
 
-  const windowCmd = [
-    "wsl --install -d Ubuntu",
-    "# Open Ubuntu app and login to the shell",
-    "sudo apt-get install postgresql postgresql-contrib default-jre",
-    "curl -s https://packages.gigahex.com/nix.sh | bash",
-  ]
+            <span className="text__bg__gradient">heapland</span>
+          </div>
+          <div className={clsx(ftuCss.github__star, "text__bg__gradient")}>
+            <svg
+              className="MuiSvgIcon-root jss504"
+              focusable="false"
+              viewBox="0 0 16 16"
+              aria-hidden="true"
+              width="30"
+              height="30"
+            >
+              <path
+                d="M15.639 6.88385C15.8003 6.74751 15.9151 6.56526 15.9678 6.36199C16.0204 6.15872 16.0083 5.94433 15.9332 5.74811C15.858 5.55188 15.7234 5.38338 15.5478 5.26561C15.3722 5.14784 15.1641 5.08655 14.952 5.0901H10.7885C10.7179 5.09007 10.649 5.06853 10.5912 5.02841C10.5334 4.98829 10.4896 4.93154 10.4656 4.86588L8.96093 0.653281C8.88615 0.461013 8.7542 0.29567 8.58249 0.179048C8.41078 0.0624257 8.20737 0 7.99906 0C7.79076 0 7.58734 0.0624257 7.41563 0.179048C7.24392 0.29567 7.11198 0.461013 7.03719 0.653281L5.53256 4.86588C5.50855 4.93154 5.46468 4.98829 5.4069 5.02841C5.34912 5.06853 5.28024 5.09007 5.20964 5.0901H1.02551C0.812892 5.09069 0.605659 5.1563 0.432226 5.27795C0.258792 5.39959 0.127649 5.5713 0.0567757 5.76955C-0.0113795 5.96552 -0.0183405 6.17724 0.0367977 6.37718C0.0919359 6.57712 0.206623 6.75602 0.365948 6.89064L3.92486 9.81228C3.97834 9.85544 4.01742 9.91353 4.03703 9.97897C4.05664 10.0444 4.05586 10.1142 4.03479 10.1792L2.53702 14.616C2.46648 14.8214 2.46407 15.0438 2.53014 15.2506C2.59621 15.4575 2.72731 15.6382 2.90436 15.7663C3.08141 15.8944 3.29518 15.9632 3.51456 15.9629C3.73394 15.9625 3.94748 15.893 4.12411 15.7643L7.79982 13.1008C7.85821 13.0573 7.92936 13.0337 8.0025 13.0337C8.07563 13.0337 8.14678 13.0573 8.20518 13.1008L11.874 15.7643C12.0493 15.9085 12.268 15.9912 12.4958 15.9993C12.7237 16.0075 12.9478 15.9407 13.1332 15.8094C13.3186 15.6782 13.4547 15.4898 13.5202 15.2739C13.5858 15.0579 13.5771 14.8265 13.4955 14.616L11.9977 10.1792C11.9766 10.1142 11.9758 10.0444 11.9954 9.97897C12.0151 9.91353 12.0541 9.85544 12.1076 9.81228L15.639 6.88385Z"
+                fill="url(#paint0_linear_140_380)"
+              ></path>
+              <defs>
+                <linearGradient
+                  id="paint0_linear_140_380"
+                  x1="0"
+                  y1="1.3626"
+                  x2="16"
+                  y2="1.3626"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stopColor="#49DE82"></stop>
+                  <stop offset="1" stopColor="#15B4C5"></stop>
+                </linearGradient>
+              </defs>
+            </svg>
+            21
+          </div>
+        </div>
+      </div>
+      <div className={clsx("container", ftuCss.image__container)}>
+        <img
+          src="https://coder.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FScreenshot.01597d0c.png&w=3840&q=75"
+          alt=""
+        />
+      </div>
+    </section>
+  )
+}
+const FeaturesCards = () => {
+  return (
+    <section
+      className={clsx(
+        "container",
+        seCss.section,
+        ftuCss.features__card__container,
+      )}
+    >
+      <div className={clsx(ftuCss.semi__title)}>
+        Code more <span className="text__bg__gradient">with Coder</span>
+      </div>
+      <div className={clsx(ftuCss.features__cards)}>
+        <FeatureCard
+          title={
+            <>
+              <span className="text__bg__gradient">Accelerate</span> builds,
+              tests, training and code tools
+            </>
+          }
+          icon={"https://coder.com/_next/static/media/accelerate.90af2ebe.svg"}
+        />
+        <FeatureCard
+          title={
+            <>
+              <span className="text__bg__gradient">Commit </span>
+              on day one with templatized workspaces
+            </>
+          }
+          icon={"https://coder.com/_next/static/media/commit.e878e129.svg"}
+        />
+        <FeatureCard
+          title={
+            <>
+              <span className="text__bg__gradient">Secure </span>
+              code and data behind your corporate firewall
+            </>
+          }
+          icon={"https://coder.com/_next/static/media/secure.75de3c95.svg"}
+        />
+      </div>
+    </section>
+  )
+}
 
+const SupportDB = () => {
+  return (
+    <section className={clsx("container", ftuCss.supportdb__container)}>
+      <div className={ftuCss.supportdb__left__content}>
+        <div className={ftuCss.supportdb__first__title}>
+          <img
+            src="https://coder.com/_next/static/media/Terraform.e56ac05c.svg"
+            alt=""
+          />
+          <span>Powered</span>
+        </div>
+        <div
+          className={clsx(ftuCss.supportdb__scnd__title, "text__bg__gradient")}
+        >
+          Developer Workspaces
+        </div>
+
+        <div className={clsx(ftuCss.supportdb__desc)}>
+          Use 2000+ Terraform providers to make any resource a development
+          workspace.
+        </div>
+      </div>
+
+      <div className={ftuCss.supportdb__right__content}>
+        <img
+          src="https://coder.com/_next/static/media/GoogleCloud.81d2574b.svg"
+          alt=""
+        />
+        <img
+          src="https://coder.com/_next/static/media/Azure.8f3f2c08.svg"
+          alt=""
+        />
+        <img
+          src="https://coder.com/_next/static/media/GoogleCloud.81d2574b.svg"
+          alt=""
+        />
+        <img
+          src="https://coder.com/_next/static/media/Docker.639ccc04.svg"
+          alt=""
+        />
+        <img
+          src="https://coder.com/_next/static/media/GoogleCloud.81d2574b.svg"
+          alt=""
+        />
+        <img
+          src="https://coder.com/_next/static/media/GoogleCloud.81d2574b.svg"
+          alt=""
+        />
+        <img
+          src="https://coder.com/_next/static/media/GoogleCloud.81d2574b.svg"
+          alt=""
+        />
+        <img
+          src="https://coder.com/_next/static/media/VSCode.cec8cf67.svg"
+          alt=""
+        />
+        <img
+          src="https://coder.com/_next/static/media/GoogleCloud.81d2574b.svg"
+          alt=""
+        />
+      </div>
+    </section>
+  )
+}
+
+const FeaturesTiles = () => {
+  return (
+    <section
+      className={clsx("container", featTiles.features__tiles__container)}
+    >
+      <div className={featTiles.feature__tiles}>
+        <div className={featTiles.tile__content}>
+          <div className={featTiles.tile__title}>
+            Code with
+            <span className="text__bg__gradient"> any editor or IDE</span>
+          </div>
+          <div className={featTiles.tile__desc}>
+            Use code-server, VS Code Remote, JetBrains Remote, RStudio, and
+            more.
+          </div>
+        </div>
+        <div className={featTiles.tile__image}>
+          <img
+            style={{ float: "right" }}
+            src="https://coder.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fide.00b47eda.png&w=828&q=75"
+            alt=""
+          />
+        </div>
+      </div>
+      <div className={featTiles.feature__tiles}>
+        <div className={featTiles.tile__image}>
+          <img
+            style={{ float: "left" }}
+            src="https://coder.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fflexibility.80da0175.png&w=828&q=75"
+            alt=""
+          />
+        </div>
+        <div className={featTiles.tile__content}>
+          <div className={featTiles.tile__title}>
+            Unlimited
+            <span className="text__bg__gradient"> flexibility & power</span>
+          </div>
+          <div className={featTiles.tile__desc}>
+            Use industry standard infrastructure-as-code systems like Terraform
+            for unlimited flexibility. Customize or fork our templates or create
+            your own to give your workspaces unlimited power. Integrate with
+            your authentication, source control, and logging.
+          </div>
+        </div>
+      </div>
+      <div className={featTiles.feature__tiles}>
+        <div className={featTiles.tile__content}>
+          <div className={featTiles.tile__title}>
+            Batteries
+            <span className="text__bg__gradient"> included</span>
+          </div>
+          <div className={featTiles.tile__desc}>
+            Build workspaces on production-ready templates available out of the
+            box.
+          </div>
+        </div>
+        <div className={featTiles.tile__image}>
+          <img
+            style={{ float: "right" }}
+            src="https://coder.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbatteries.110d2c63.png&w=828&q=75"
+            alt=""
+          />
+        </div>
+      </div>
+      <div className={featTiles.feature__tiles}>
+        <div className={featTiles.tile__image}>
+          <img
+            style={{ float: "left" }}
+            src="https://coder.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdotfiles.b4bba156.png&w=828&q=75"
+            alt=""
+          />
+        </div>
+        <div className={featTiles.tile__content}>
+          <div className={featTiles.tile__title}>
+            Personalize your
+            <span className="text__bg__gradient"> workspace</span>
+          </div>
+          <div className={featTiles.tile__desc}>
+            Use custom dotfiles and configurations. Execute personalization
+            scripts to make standardized workspaces uniquely yours, safely and
+            reliably.
+          </div>
+          <div className={featTiles.tile__desc}>
+            ssh directly into your workspace to do anything you can on a local
+            workstation but better and faster.
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+const Pricing = () => {
+  return (
+    <section className={clsx("container", priCss.pricing__container)}>
+      <div className={priCss.free__version}>
+        <div className={priCss.pricing__label}>Pricing</div>
+        <div className={priCss.desc}>
+          Our entire developer experience is free and open source. Reach out
+          when you have a mature deployment or enterprise needs.
+        </div>
+      </div>
+
+      <div>
+        <div className={priCss.community__version}>
+          <div className={priCss.body__content}>
+            <div className={priCss.community__label}>Community</div>
+            <ul className={priCss.price__features}>
+              <li>
+                <svg
+                  className="MuiSvgIcon-root jss535"
+                  focusable="false"
+                  viewBox="0 0 20 20"
+                  aria-hidden="true"
+                  width="20"
+                  height="20"
+                >
+                  <path
+                    d="M10 0C4.486 0 0 4.486 0 10C0 15.514 4.486 20 10 20C15.514 20 20 15.514 20 10C20 4.486 15.514 0 10 0ZM8.001 14.413L4.288 10.708L5.7 9.292L7.999 11.587L13.293 6.293L14.707 7.707L8.001 14.413Z"
+                    fill="#2DA557"
+                  ></path>
+                </svg>
+                <strong>Open Source</strong>
+              </li>
+              <li>
+                <svg
+                  className="MuiSvgIcon-root jss535"
+                  focusable="false"
+                  viewBox="0 0 20 20"
+                  aria-hidden="true"
+                  width="20"
+                  height="20"
+                >
+                  <path
+                    d="M10 0C4.486 0 0 4.486 0 10C0 15.514 4.486 20 10 20C15.514 20 20 15.514 20 10C20 4.486 15.514 0 10 0ZM8.001 14.413L4.288 10.708L5.7 9.292L7.999 11.587L13.293 6.293L14.707 7.707L8.001 14.413Z"
+                    fill="#2DA557"
+                  ></path>
+                </svg>
+                <strong>Always Free</strong>
+              </li>
+              <li>
+                <svg
+                  className="MuiSvgIcon-root jss535"
+                  focusable="false"
+                  viewBox="0 0 20 20"
+                  aria-hidden="true"
+                  width="20"
+                  height="20"
+                >
+                  <path
+                    d="M10 0C4.486 0 0 4.486 0 10C0 15.514 4.486 20 10 20C15.514 20 20 15.514 20 10C20 4.486 15.514 0 10 0ZM8.001 14.413L4.288 10.708L5.7 9.292L7.999 11.587L13.293 6.293L14.707 7.707L8.001 14.413Z"
+                    fill="#2DA557"
+                  ></path>
+                </svg>
+                <strong>Unlimited Users</strong>
+              </li>
+              <li>
+                <svg
+                  className="MuiSvgIcon-root jss535"
+                  focusable="false"
+                  viewBox="0 0 20 20"
+                  aria-hidden="true"
+                  width="20"
+                  height="20"
+                >
+                  <path
+                    d="M10 0C4.486 0 0 4.486 0 10C0 15.514 4.486 20 10 20C15.514 20 20 15.514 20 10C20 4.486 15.514 0 10 0ZM8.001 14.413L4.288 10.708L5.7 9.292L7.999 11.587L13.293 6.293L14.707 7.707L8.001 14.413Z"
+                    fill="#2DA557"
+                  ></path>
+                </svg>
+                <strong>Unlimited Workspaces</strong>
+              </li>
+              <li>
+                <svg
+                  className="MuiSvgIcon-root jss535"
+                  focusable="false"
+                  viewBox="0 0 20 20"
+                  aria-hidden="true"
+                  width="20"
+                  height="20"
+                >
+                  <path
+                    d="M10 0C4.486 0 0 4.486 0 10C0 15.514 4.486 20 10 20C15.514 20 20 15.514 20 10C20 4.486 15.514 0 10 0ZM8.001 14.413L4.288 10.708L5.7 9.292L7.999 11.587L13.293 6.293L14.707 7.707L8.001 14.413Z"
+                    fill="#2DA557"
+                  ></path>
+                </svg>
+                <strong>OpenID Connect</strong>
+              </li>
+              <li>
+                <svg
+                  className="MuiSvgIcon-root jss535"
+                  focusable="false"
+                  viewBox="0 0 20 20"
+                  aria-hidden="true"
+                  width="20"
+                  height="20"
+                >
+                  <path
+                    d="M10 0C4.486 0 0 4.486 0 10C0 15.514 4.486 20 10 20C15.514 20 20 15.514 20 10C20 4.486 15.514 0 10 0ZM8.001 14.413L4.288 10.708L5.7 9.292L7.999 11.587L13.293 6.293L14.707 7.707L8.001 14.413Z"
+                    fill="#2DA557"
+                  ></path>
+                </svg>
+                <strong>Sign in with GitHub</strong>
+              </li>
+            </ul>
+          </div>
+
+          <a href="#" className={priCss.view__repo__btn__bottom}>
+            View the Repo
+          </a>
+        </div>
+        <div className={priCss.enterprise__version}>
+          <div className={priCss.body__content}>
+            <div className={priCss.enterprise__label}>Enterprise</div>
+            <ul className={priCss.price__features}>
+              <li>
+                <svg
+                  className="MuiSvgIcon-root jss535"
+                  focusable="false"
+                  viewBox="0 0 20 20"
+                  aria-hidden="true"
+                  width="20"
+                  height="20"
+                >
+                  <path
+                    d="M10 0C4.486 0 0 4.486 0 10C0 15.514 4.486 20 10 20C15.514 20 20 15.514 20 10C20 4.486 15.514 0 10 0ZM8.001 14.413L4.288 10.708L5.7 9.292L7.999 11.587L13.293 6.293L14.707 7.707L8.001 14.413Z"
+                    fill="#2DA557"
+                  ></path>
+                </svg>
+                <strong>24/7 Enterprise Support</strong>
+              </li>
+              <li>
+                <svg
+                  className="MuiSvgIcon-root jss535"
+                  focusable="false"
+                  viewBox="0 0 20 20"
+                  aria-hidden="true"
+                  width="20"
+                  height="20"
+                >
+                  <path
+                    d="M10 0C4.486 0 0 4.486 0 10C0 15.514 4.486 20 10 20C15.514 20 20 15.514 20 10C20 4.486 15.514 0 10 0ZM8.001 14.413L4.288 10.708L5.7 9.292L7.999 11.587L13.293 6.293L14.707 7.707L8.001 14.413Z"
+                    fill="#2DA557"
+                  ></path>
+                </svg>
+                <strong>High Availability</strong>
+              </li>
+              <li>
+                <svg
+                  className="MuiSvgIcon-root jss535"
+                  focusable="false"
+                  viewBox="0 0 20 20"
+                  aria-hidden="true"
+                  width="20"
+                  height="20"
+                >
+                  <path
+                    d="M10 0C4.486 0 0 4.486 0 10C0 15.514 4.486 20 10 20C15.514 20 20 15.514 20 10C20 4.486 15.514 0 10 0ZM8.001 14.413L4.288 10.708L5.7 9.292L7.999 11.587L13.293 6.293L14.707 7.707L8.001 14.413Z"
+                    fill="#2DA557"
+                  ></path>
+                </svg>
+                <strong>Quotas</strong>
+              </li>
+              <li>
+                <svg
+                  className="MuiSvgIcon-root jss535"
+                  focusable="false"
+                  viewBox="0 0 20 20"
+                  aria-hidden="true"
+                  width="20"
+                  height="20"
+                >
+                  <path
+                    d="M10 0C4.486 0 0 4.486 0 10C0 15.514 4.486 20 10 20C15.514 20 20 15.514 20 10C20 4.486 15.514 0 10 0ZM8.001 14.413L4.288 10.708L5.7 9.292L7.999 11.587L13.293 6.293L14.707 7.707L8.001 14.413Z"
+                    fill="#2DA557"
+                  ></path>
+                </svg>
+                <strong>Auditing</strong>
+              </li>
+              <li>
+                <svg
+                  className="MuiSvgIcon-root jss535"
+                  focusable="false"
+                  viewBox="0 0 20 20"
+                  aria-hidden="true"
+                  width="20"
+                  height="20"
+                >
+                  <path
+                    d="M10 0C4.486 0 0 4.486 0 10C0 15.514 4.486 20 10 20C15.514 20 20 15.514 20 10C20 4.486 15.514 0 10 0ZM8.001 14.413L4.288 10.708L5.7 9.292L7.999 11.587L13.293 6.293L14.707 7.707L8.001 14.413Z"
+                    fill="#2DA557"
+                  ></path>
+                </svg>
+                <strong>RBAC</strong>
+              </li>
+              <li>
+                <svg
+                  className="MuiSvgIcon-root jss535"
+                  focusable="false"
+                  viewBox="0 0 20 20"
+                  aria-hidden="true"
+                  width="20"
+                  height="20"
+                >
+                  <path
+                    d="M10 0C4.486 0 0 4.486 0 10C0 15.514 4.486 20 10 20C15.514 20 20 15.514 20 10C20 4.486 15.514 0 10 0ZM8.001 14.413L4.288 10.708L5.7 9.292L7.999 11.587L13.293 6.293L14.707 7.707L8.001 14.413Z"
+                    fill="#2DA557"
+                  ></path>
+                </svg>
+                <strong>Air Gapped Deployment</strong>
+              </li>
+            </ul>
+          </div>
+          <a href="#" className={priCss.request__btn}>
+            Request Demo
+          </a>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+const GetStartedSec = () => {
   const [copied, setCopied] = React.useState(false)
-  const [osType, setOsType] = React.useState<{
-    osName: string
-    osLogo: any
-    instgxcCmd: string[]
-  }>({
-    osName: "Mac",
-    osLogo: "/img/pages/landing/appleIcon.svg",
-    instgxcCmd: macCmd,
-  })
 
+  const cmd = "curl -fsSL https://coder.com/install.sh | sh"
   React.useEffect(() => {
     let id
     if (copied) {
@@ -87,553 +618,126 @@ const Top = () => {
     }
     return () => clearTimeout(id)
   }, [copied])
-
-  const onClickOs = (os: string) => {
-    switch (os) {
-      case "Docker":
-        setOsType({
-          osName: os,
-          osLogo: "/img/docker.png",
-          instgxcCmd: dockerCmd,
-        })
-        break
-      case "Ubuntu":
-        setOsType({
-          osName: os,
-          osLogo: "/img/pages/landing/ubuntu-logo.svg",
-          instgxcCmd: ubuntuCmd,
-        })
-        break
-      case "Mac":
-        setOsType({
-          osName: os,
-          osLogo: "/img/pages/landing/appleIcon.svg",
-          instgxcCmd: macCmd,
-        })
-        break
-      case "Window":
-        setOsType({
-          osName: os,
-          osLogo: "/img/pages/landing/microsoftLogo.svg",
-          instgxcCmd: windowCmd,
-        })
-        break
-    }
-  }
-
-  const getActiveTab = (os: string, selectedOs: string) => {
-    if (os === selectedOs) {
-      return "tabs__item--active"
-    } else {
-      return ""
-    }
-  }
-
   return (
-    <section
-      className={clsx(
-        seCss.section,
-        seCss["section--center"],
-        seCss["section--odd"],
-        juCss["hero-section"],
-      )}
-    >
-      <div className={juCss.jumbotron}>
-        <div className={juCss.jumbotron__center__title}>
-          <h1
-            className={clsx(
-              seCss.section__title,
-              seCss["section__title--jumbotron"],
-              seCss["section__title--accent"],
-            )}
-            style={{ color: "#fff", textAlign: "center" }}
+    <section className={clsx("container", seCss.get__started_sec)}>
+      <div className={seCss.get__started}>
+        <div className={seCss.get__started__label}>Get started</div>
+        <div className={seCss.cmd__copy__box}>
+          <div>
+            <span className={seCss.dollar__sign}>$</span>
+            {cmd}
+          </div>
+          <button
+            className={seCss.copy__btn}
+            onClick={async () => {
+              await navigator.clipboard.writeText(cmd).then()
+              setCopied(true)
+            }}
           >
-            Open Source
-            <br />
-            Data Infrastructure Platform
-          </h1>
-          <p className={clsx(seCss["section__sub--title"])}>
-            Now, creating and managing data infrastructure is as easy as
-            ordering a pizza 🍕.
-          </p>
-        </div>
-        <div className={clsx(juCss.jumbotron__image)}>
-          {/* <img
-            className=""
-            src="/img/new-hero-gigahex-min.png"
-            alt="Langing page Image"
-          /> */}
+            {copied ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="752pt"
+                height="752pt"
+                version="1.1"
+                viewBox="0 0 752 752"
+              >
+                <path
+                  d="m554.07 285.07-212.64 221.16c-11.84 12.312-30.781 12.312-42.621 0l-106.08-111.29c-11.84-12.312-11.84-32.203 0-44.516 11.84-12.312 30.781-12.312 42.621 0l85.246 89.035 191.33-198.9c11.84-12.312 30.781-12.312 42.621 0 11.363 12.309 11.363 32.199-0.47656 44.512z"
+                  fill="#4c52df"
+                  fillRule="evenodd"
+                />
+              </svg>
+            ) : (
+              <svg
+                className="MuiSvgIcon-root"
+                focusable="false"
+                viewBox="0 0 18 18"
+                aria-hidden="true"
+                width="18"
+                height="18"
+              >
+                <path
+                  fillRule="evenodd"
+                  clipRule="evenodd"
+                  d="M1.0557 1.05546C1.57143 0.539731 2.2709 0.25 3.00024 0.25H11.0002C11.7296 0.25 12.4291 0.539731 12.9448 1.05546C13.4605 1.57118 13.7502 2.27065 13.7502 3V4.25H15.0002C16.519 4.25 17.7502 5.48122 17.7502 7V15C17.7502 16.5188 16.519 17.75 15.0002 17.75H7.00024C5.48146 17.75 4.25024 16.5188 4.25024 15V13.75H3.00024C2.2709 13.75 1.57143 13.4603 1.0557 12.9445C0.539975 12.4288 0.250244 11.7293 0.250244 11V3C0.250244 2.27065 0.539975 1.57118 1.0557 1.05546ZM5.75024 15C5.75024 15.6904 6.30989 16.25 7.00024 16.25H15.0002C15.6906 16.25 16.2502 15.6904 16.2502 15V7C16.2502 6.30964 15.6906 5.75 15.0002 5.75H7.00024C6.30989 5.75 5.75024 6.30964 5.75024 7V15ZM12.2502 4.25H7.00024C5.48146 4.25 4.25024 5.48122 4.25024 7V12.25H3.00024C2.66872 12.25 2.35078 12.1183 2.11636 11.8839C1.88194 11.6495 1.75024 11.3315 1.75024 11V3C1.75024 2.66848 1.88194 2.35054 2.11636 2.11612C2.35078 1.8817 2.66872 1.75 3.00024 1.75H11.0002C11.3318 1.75 11.6497 1.8817 11.8841 2.11612C12.1185 2.35054 12.2502 2.66848 12.2502 3V4.25Z"
+                  fill="#4D52E0"
+                ></path>
+              </svg>
+            )}
+          </button>
         </div>
       </div>
 
-      <div
-        className={clsx(
-          juCss.gigahex_installer_banner,
-          seCss.section,
-          seCss["section--center"],
-        )}
-      >
-        <div className={clsx("row", juCss.gigahex_installer_container)}>
-          <div className={clsx("col col--12")} style={{ padding: 0 }}>
-            <ul className={clsx("tabs tabs--block", juCss.os_tabs_container)}>
-              <li
-                className={clsx(
-                  "tabs__item",
-                  juCss.os_tab,
-                  getActiveTab("Mac", osType.osName),
-                )}
-                onClick={() => onClickOs("Mac")}
-              >
-                Mac
-              </li>
-              <li
-                className={clsx(
-                  "tabs__item",
-                  juCss.os_tab,
-                  getActiveTab("Window", osType.osName),
-                )}
-                onClick={() => onClickOs("Window")}
-              >
-                Window
-              </li>
-              <li
-                className={clsx(
-                  "tabs__item",
-                  juCss.os_tab,
-                  getActiveTab("Ubuntu", osType.osName),
-                )}
-                onClick={() => onClickOs("Ubuntu")}
-              >
-                Ubuntu
-              </li>
-            </ul>
-          </div>
-          <div
-            className={clsx(
-              "col col--5",
-              seCss["content--center"],
-              juCss.installer__left__content,
-            )}
-          >
-            <div className={clsx("row")}>
-              {/* <div className={clsx("col col--4", seCss["content--center"])}>
-                <div
-                  className={clsx(juCss.docker__logo, seCss["content--center"])}
+      <div className={seCss.check__on__github}>
+        <div className={seCss.label}>Check us out on</div>
+        <div>
+          <a className={seCss.github__name__icon}>
+            <svg
+              style={{ marginRight: 15 }}
+              className="MuiSvgIcon-root jss79"
+              focusable="false"
+              viewBox="0 0 30 30"
+              aria-hidden="true"
+            >
+              <path
+                d="M15 0C6.71625 0 0 6.69143 0 14.9467C0 21.5503 4.29844 27.1534 10.2581 29.1292C11.0081 29.2674 11.2838 28.805 11.2838 28.4099C11.2838 28.0539 11.2697 26.876 11.2631 25.627C7.08937 26.5313 6.20906 23.8633 6.20906 23.8633C5.52656 22.136 4.54406 21.6764 4.54406 21.6764C3.18281 20.7488 4.64719 20.7674 4.64719 20.7674C6.15281 20.873 6.94594 22.3079 6.94594 22.3079C8.28375 24.5929 10.455 23.9324 11.3109 23.5503C11.445 22.5844 11.8341 21.9249 12.2634 21.5512C8.93156 21.1738 5.42906 19.8912 5.42906 14.1648C5.42906 12.5328 6.015 11.1997 6.975 10.1525C6.81937 9.77605 6.30562 8.25616 7.12031 6.19726C7.12031 6.19726 8.38031 5.79557 11.2463 7.72929C12.4425 7.39766 13.7259 7.23231 15.0009 7.22578C16.275 7.23138 17.5594 7.39766 18.7584 7.72929C21.6216 5.79557 22.8787 6.19726 22.8787 6.19726C23.6953 8.25616 23.1816 9.77605 23.0259 10.1525C23.9878 11.1988 24.57 12.5328 24.57 14.1648C24.57 19.9052 21.0609 21.1691 17.7206 21.54C18.2587 22.0043 18.7378 22.9132 18.7378 24.3079C18.7378 26.308 18.72 27.9176 18.72 28.4099C18.72 28.8078 18.99 29.274 19.7503 29.1273C25.7072 27.1487 30 21.5484 30 14.9467C30 6.69143 23.2838 0 15 0Z"
+                fill="url(#paint0_linear_140_567)"
+              ></path>
+              <defs>
+                <linearGradient
+                  id="paint0_linear_140_567"
+                  x1="0"
+                  y1="2.4829"
+                  x2="30"
+                  y2="2.4829"
+                  gradientUnits="userSpaceOnUse"
                 >
-                  <img
-                    src={osType.osLogo}
-                    width={100}
-                    style={{
-                      paddingRight: osType.osName === "Ubuntu" ? "10px" : "0",
-                    }}
-                    alt={osType.osName}
-                  />
-                </div>
-              </div> */}
-              <div className="col col--12">
-                <h2 className={clsx(juCss.installer__title)}>
-                  <span>Install Gigahex on {osType.osName}</span>
-                </h2>
-                <p
-                  className={clsx(
-                    "margin-bottom--none",
-                    juCss.installer__feature,
-                  )}
-                >
-                  <svg
-                    width="1em"
-                    height="1em"
-                    version="1.1"
-                    viewBox="0 0 752 752"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill="#A2E0A5"
-                      d="m544.14 272.2c-2.5195-16.16-10.105-31.098-21.672-42.664-11.562-11.562-26.504-19.152-42.66-21.668-69.039-6.6914-138.57-6.6914-207.61 0-16.16 2.5156-31.098 10.105-42.664 21.668-11.562 11.566-19.152 26.504-21.668 42.664-6.6914 69.035-6.6914 138.55 0 207.59 2.5156 16.16 10.102 31.105 21.664 42.672 11.566 11.566 26.508 19.156 42.668 21.676 69.039 6.6914 138.57 6.6914 207.61 0 16.16-2.5195 31.102-10.109 42.664-21.676 11.566-11.566 19.152-26.512 21.668-42.672 6.6914-69.035 6.6914-138.55 0-207.59zm-62.07 60.426-103.11 116.22c-4.1953 4.6914-10.191 7.3828-16.484 7.3984h-0.12109c-6.2617 0.003906-12.234-2.6406-16.441-7.2812l-68.18-75.031c-4.1523-4.3281-6.375-10.148-6.168-16.137 0.21094-5.9922 2.832-11.645 7.2734-15.672 4.4375-4.0273 10.316-6.0898 16.301-5.7148 5.9805 0.375 11.559 3.1523 15.461 7.7031l51.531 56.77 86.738-97.676h0.003906c3.8906-4.4688 9.4062-7.1992 15.32-7.5781 5.9141-0.37891 11.734 1.6211 16.164 5.5547 4.4297 3.9336 7.1016 9.4766 7.4258 15.395 0.32031 5.918-1.7383 11.719-5.7148 16.109z"
-                    />
-                  </svg>
-                  Be up and running in 60 seconds
-                </p>
-                <p
-                  className={clsx(
-                    "margin-bottom--none margin-bottom--md",
-                    juCss.installer__feature,
-                  )}
-                >
-                  <svg
-                    width="1em"
-                    height="1em"
-                    version="1.1"
-                    viewBox="0 0 752 752"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill="#A2E0A5"
-                      d="m544.14 272.2c-2.5195-16.16-10.105-31.098-21.672-42.664-11.562-11.562-26.504-19.152-42.66-21.668-69.039-6.6914-138.57-6.6914-207.61 0-16.16 2.5156-31.098 10.105-42.664 21.668-11.562 11.566-19.152 26.504-21.668 42.664-6.6914 69.035-6.6914 138.55 0 207.59 2.5156 16.16 10.102 31.105 21.664 42.672 11.566 11.566 26.508 19.156 42.668 21.676 69.039 6.6914 138.57 6.6914 207.61 0 16.16-2.5195 31.102-10.109 42.664-21.676 11.566-11.566 19.152-26.512 21.668-42.672 6.6914-69.035 6.6914-138.55 0-207.59zm-62.07 60.426-103.11 116.22c-4.1953 4.6914-10.191 7.3828-16.484 7.3984h-0.12109c-6.2617 0.003906-12.234-2.6406-16.441-7.2812l-68.18-75.031c-4.1523-4.3281-6.375-10.148-6.168-16.137 0.21094-5.9922 2.832-11.645 7.2734-15.672 4.4375-4.0273 10.316-6.0898 16.301-5.7148 5.9805 0.375 11.559 3.1523 15.461 7.7031l51.531 56.77 86.738-97.676h0.003906c3.8906-4.4688 9.4062-7.1992 15.32-7.5781 5.9141-0.37891 11.734 1.6211 16.164 5.5547 4.4297 3.9336 7.1016 9.4766 7.4258 15.395 0.32031 5.918-1.7383 11.719-5.7148 16.109z"
-                    />
-                  </svg>
-                  Launch Spark and Kafka clusters
-                </p>
-              </div>
-            </div>
-          </div>
-          <div
-            className={clsx(
-              "col col--7",
-              seCss["content--center"],
-              juCss.installer__right_content,
-            )}
-          >
-            <div>
-              {osType.instgxcCmd.map((cmd, i) => (
-                <pre key={i} className={clsx(juCss.container_code)}>
-                  {cmd.startsWith("#") && (
-                    <>
-                      <code
-                        className={clsx(juCss.container_code, juCss.code_gray)}
-                      >
-                        {cmd}
-                      </code>
-                    </>
-                  )}
-                  {!cmd.startsWith("#") && (
-                    <>
-                      <span className={juCss.doller__sign}>$</span>
-                      <code className={clsx(juCss.container_code)}>{cmd}</code>
-                    </>
-                  )}
-                </pre>
-              ))}
-
-              <Button
-                className={clsx(juCss.actionbtn, juCss.cmd__copy__btn)}
-                uppercase={false}
-                onClick={async () => {
-                  await navigator.clipboard
-                    .writeText(osType.instgxcCmd.join("\n"))
-                    .then()
-                  setCopied(true)
-                }}
-                size="small"
-              >
-                {copied ? (
-                  <>
-                    COPIED{" "}
-                    <svg
-                      width="2.5em"
-                      height="2.5em"
-                      version="1.1"
-                      viewBox="0 0 752 752"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        fill="#fff"
-                        d="m544.14 272.2c-2.5195-16.16-10.105-31.098-21.672-42.664-11.562-11.562-26.504-19.152-42.66-21.668-69.039-6.6914-138.57-6.6914-207.61 0-16.16 2.5156-31.098 10.105-42.664 21.668-11.562 11.566-19.152 26.504-21.668 42.664-6.6914 69.035-6.6914 138.55 0 207.59 2.5156 16.16 10.102 31.105 21.664 42.672 11.566 11.566 26.508 19.156 42.668 21.676 69.039 6.6914 138.57 6.6914 207.61 0 16.16-2.5195 31.102-10.109 42.664-21.676 11.566-11.566 19.152-26.512 21.668-42.672 6.6914-69.035 6.6914-138.55 0-207.59zm-62.07 60.426-103.11 116.22c-4.1953 4.6914-10.191 7.3828-16.484 7.3984h-0.12109c-6.2617 0.003906-12.234-2.6406-16.441-7.2812l-68.18-75.031c-4.1523-4.3281-6.375-10.148-6.168-16.137 0.21094-5.9922 2.832-11.645 7.2734-15.672 4.4375-4.0273 10.316-6.0898 16.301-5.7148 5.9805 0.375 11.559 3.1523 15.461 7.7031l51.531 56.77 86.738-97.676h0.003906c3.8906-4.4688 9.4062-7.1992 15.32-7.5781 5.9141-0.37891 11.734 1.6211 16.164 5.5547 4.4297 3.9336 7.1016 9.4766 7.4258 15.395 0.32031 5.918-1.7383 11.719-5.7148 16.109z"
-                      />
-                    </svg>
-                  </>
-                ) : (
-                  <>
-                    COPY COMMANDS{" "}
-                    <img src="/img/icons/copy.svg" width={40} alt="" />
-                  </>
-                )}
-              </Button>
-            </div>
-          </div>
+                  <stop stopColor="#49DE82"></stop>
+                  <stop offset="1" stopColor="#15B4C5"></stop>
+                </linearGradient>
+              </defs>
+            </svg>
+            GitHub
+          </a>
         </div>
+      </div>
+      <div className={seCss.join__us__on}>
+        <div className={seCss.label}>Join us on</div>
+        <a className={seCss.join__on__discord}>
+          <svg
+            style={{ marginRight: 15 }}
+            className="MuiSvgIcon-root jss79"
+            focusable="false"
+            viewBox="0 0 48 36"
+            aria-hidden="true"
+            width="48"
+            height="36"
+          >
+            <path
+              d="M39.9826 2.9842C36.9723 1.60295 33.7442 0.585295 30.369 0.00244498C30.3075 -0.00880385 30.2461 0.0193076 30.2145 0.0755318C29.7993 0.813931 29.3394 1.77723 29.0174 2.53438C25.3872 1.9909 21.7756 1.9909 18.2198 2.53438C17.8977 1.7604 17.4211 0.813931 17.0041 0.0755318C16.9724 0.0211835 16.911 -0.00692794 16.8496 0.00244498C13.4762 0.583433 10.2481 1.60108 7.23597 2.9842C7.2099 2.99545 7.18754 3.0142 7.17271 3.03855C1.04968 12.1862 -0.627674 21.1091 0.19518 29.9213C0.198903 29.9644 0.223105 30.0056 0.256615 30.0318C4.29641 32.9986 8.20965 34.7996 12.0502 35.9934C12.1117 36.0122 12.1768 35.9897 12.2159 35.9391C13.1244 34.6985 13.9342 33.3903 14.6286 32.0146C14.6696 31.9341 14.6305 31.8385 14.5467 31.8066C13.2622 31.3194 12.039 30.7252 10.8625 30.0506C10.7694 29.9962 10.762 29.8631 10.8476 29.7994C11.0952 29.6139 11.3428 29.4208 11.5792 29.2259C11.622 29.1903 11.6816 29.1828 11.7319 29.2053C19.4615 32.7343 27.8296 32.7343 35.468 29.2053C35.5183 29.1809 35.5779 29.1885 35.6225 29.224C35.859 29.419 36.1066 29.6139 36.3561 29.7994C36.4417 29.8631 36.4361 29.9962 36.343 30.0506C35.1665 30.7383 33.9433 31.3194 32.6569 31.8048C32.5732 31.8366 32.5359 31.9341 32.5769 32.0146C33.2862 33.3884 34.096 34.6965 34.9877 35.9372C35.025 35.9897 35.092 36.0122 35.1534 35.9934C39.0126 34.7996 42.9258 32.9986 46.9656 30.0318C47.001 30.0056 47.0234 29.9662 47.0271 29.9231C48.0119 19.7353 45.3776 10.8856 40.044 3.04041C40.0309 3.0142 40.0087 2.99545 39.9826 2.9842ZM15.7829 24.5555C13.4558 24.5555 11.5383 22.4191 11.5383 19.7953C11.5383 17.1714 13.4186 15.035 15.7829 15.035C18.1658 15.035 20.0647 17.1902 20.0274 19.7953C20.0274 22.4191 18.1471 24.5555 15.7829 24.5555ZM31.4766 24.5555C29.1496 24.5555 27.2321 22.4191 27.2321 19.7953C27.2321 17.1714 29.1123 15.035 31.4766 15.035C33.8596 15.035 35.7584 17.1902 35.7213 19.7953C35.7213 22.4191 33.8596 24.5555 31.4766 24.5555Z"
+              fill="url(#paint0_linear_140_1532)"
+            ></path>
+            <defs>
+              <linearGradient
+                id="paint0_linear_140_1532"
+                x1="0"
+                y1="3.06585"
+                x2="47.2305"
+                y2="3.06585"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stopColor="#49DE82"></stop>
+                <stop offset="1" stopColor="#15B4C5"></stop>
+              </linearGradient>
+            </defs>
+          </svg>
+          Discord
+        </a>
       </div>
     </section>
   )
 }
-
-// even section
-const FeaturesCard = () => {
-  return (
-    <section
-      className={clsx(
-        ftuCss.features__sec,
-        seCss.section,
-        ftuCss.features__light,
-        seCss["section--center"],
-      )}
-    >
-      <div className={clsx(ftuCss.features__top__info, "text--center")}>
-        <h2 className={clsx(seCss.section__title, "padding-bottom--md")}>
-          Designed for developers, built for speed.
-        </h2>
-        {/* <p className={clsx(seCss.section__subtitle)}></p> */}
-      </div>
-      <div className="container">
-        <div className={clsx("row", ftuCss.features__row)}>
-          <div className={ftuCss.feature__col}>
-            <FeatureCard
-              title="Fast development"
-              desc="Bootstrap single node Spark, Kafka and HDFS cluster under a minute"
-              icon="/img/pages/landing/feature-tile-icon-01.svg"
-            />
-          </div>
-          <div className={ftuCss.feature__col}>
-            <FeatureCard
-              title="Complete cluster control"
-              desc="Launch an interactive spark-shell, view Kafka messages and browse HDFS. "
-              icon="/img/pages/landing/feature-tile-icon-02.svg"
-            />
-          </div>
-          <div className={ftuCss.feature__col}>
-            <FeatureCard
-              title="Open Source driven"
-              desc="Creating software in open communities is the
-              de facto standard for building impactful software"
-              icon="/img/pages/landing/feature-tile-icon-03.svg"
-            />
-          </div>
-          <div className={ftuCss.feature__col}>
-            <FeatureCard
-              title="Developer Focused"
-              desc="Focus on developing and deploying applications, and not on complex infrastructure management"
-              icon="/img/pages/landing/feature-tile-icon-04.svg"
-            />
-          </div>
-          <div className={ftuCss.feature__col}>
-            <FeatureCard
-              title="Manage multiple clusters"
-              desc="Manage and monitor data infrastructure through a single interface. No switching across different windows."
-              icon="/img/pages/landing/container.svg"
-            />
-          </div>
-          <div className={ftuCss.feature__col}>
-            <FeatureCard
-              title="Move to production faster"
-              desc="Develop and test locally and deploy to production with complete confidence"
-              icon="/img/pages/landing/deploy.svg"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-  )
-}
-// odd section
-const FooterConsole = () => {
-  return (
-    <section
-      style={{ display: "none" }}
-      className={clsx(
-        seCss.section,
-        seCss["section--center"],
-        seCss["section--odd"],
-      )}
-    >
-      <div
-        className={clsx(
-          seCss.section__footer,
-          seCss["section__footer--console"],
-        )}
-      >
-        <div
-          className={clsx(ftrClsCss.footerCol, ftrClsCss.footer__console__left)}
-        >
-          <h2 className={ftrClsCss.flashy__title}>And Manage deployments</h2>
-          <p className={clsx(ftrClsCss.flashy__content, "margin-bottom--lg")}>
-            There&lsquo;s more. You can also have multiple deployments
-            configuration to test your application against different cluster
-            managers.
-          </p>
-        </div>
-
-        <div
-          className={clsx(
-            ftrClsCss.footerCol,
-            ftrClsCss.footer__console__right,
-          )}
-        >
-          <div className={clsx(ftrClsCss.console__right__image)}>
-            <img
-              className="shadow--md"
-              src="/img/pages/landing/deployments.png"
-              alt="landing page image"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-  )
-}
-// even section
-const WatchInDemo = () => (
-  <section
-    style={{ display: "none" }}
-    className={clsx(
-      seCss.section,
-      seCss["section--center"],
-      seCss["section--light"],
-    )}
-  >
-    <div className={clsx(wthCss.watch__sec)}>
-      <h2
-        className={clsx(
-          wthCss.watch__title,
-          seCss.section__title,
-          "text--center",
-        )}
-      >
-        Watch it in action
-      </h2>
-      <div className={clsx("container", wthCss.video__container)}>
-        <div
-          style={{
-            position: "relative",
-            paddingBottom: "59.715025906735754%",
-            height: 0,
-          }}
-        >
-          <video
-            controls
-            poster="/img/hero-banner.png"
-            src="video.mp4"
-            width="100%"
-            autoPlay
-          >
-            Your browser does not support the HTML5 Video element.
-          </video>
-        </div>
-      </div>
-    </div>
-  </section>
-)
-
-// odd section
-const FeaturesTiles = () => (
-  <section
-    className={clsx(
-      seCss.section,
-      seCss["section--center"],
-      seCss["section--odd"],
-      "padding-top--xl padding-bottom--lg",
-    )}
-  >
-    <div className={clsx(featTiles.features__tiles__top)}>
-      <div
-        className={clsx(
-          featTiles.features__tiles__jumbotron,
-          "padding-bottom--md",
-        )}
-      >
-        <h1
-          className={clsx(seCss.section__title, "text--center")}
-          style={{ color: "#fff" }}
-        >
-          Data Platform that saves thousands of developers&rsquo; hours
-        </h1>
-      </div>
-    </div>
-    <div className={clsx(seCss.section, featTiles.features__tiles__container)}>
-      <div className={clsx(featTiles.features__tiles__row)}>
-        <div
-          className={clsx(featTiles.tile__item__content)}
-          data-reveal-container=".split-item"
-        >
-          <h2
-            className={clsx(featTiles.feature__tile__cont__title)}
-            style={{ color: "#fff" }}
-          >
-            Launch Sandbox clusters
-          </h2>
-          <p
-            className={featTiles.feature__tile__cont__desc}
-            style={{ marginBottom: 20 }}
-          >
-            <b style={{ color: "#fff" }}>Fast provisioning. </b> Launch single
-            node clusters on your desktop under a minute.
-          </p>
-          <p className={featTiles.feature__tile__cont__desc}>
-            <b style={{ color: "#fff" }}>Focus on development.</b> Forget the
-            mess of bootstrapping and managing clusters on your own.
-          </p>
-        </div>
-        <div className={clsx(featTiles.tile__item__img)}>
-          <div className={clsx(featTiles.tile__img__box, "shadow--md")}>
-            <img
-              src="/img/pages/landing/build-cluster.png"
-              alt="Choose cluster"
-            />
-          </div>
-        </div>
-      </div>
-      <div
-        className={clsx(
-          featTiles.features__tiles__row,
-          featTiles.fetaure__tiles_light,
-        )}
-      >
-        <div className={clsx(featTiles.tile__item__img)}>
-          <div className={clsx(featTiles.tile__img__box, "shadow--md")}>
-            <img
-              src="/img/pages/landing/browse-hdfs.png"
-              alt="Features split 02"
-            />
-          </div>
-        </div>
-        <div
-          className={clsx(featTiles.tile__item__content)}
-          data-reveal-container=".split-item"
-        >
-          <h2 className={featTiles.feature__tile__cont__title}>
-            HDFS For Storage
-          </h2>
-          <p
-            className={featTiles.feature__tile__cont__desc}
-            style={{ marginBottom: 20 }}
-          >
-            <b style={{ color: "#000" }}>Browse HDFS.</b> With easy to use file
-            browser, you can now quickly drill down to the actual location of
-            the file.
-          </p>
-          <p className={featTiles.feature__tile__cont__desc}>
-            <b style={{ color: "#000" }}>Upload Files.</b> Drag and drop
-            multiple files of any format to quickly test your data pipeline.
-          </p>
-        </div>
-      </div>
-      <div className={clsx(featTiles.features__tiles__row)}>
-        <div
-          className={clsx(featTiles.tile__item__content)}
-          data-reveal-container=".split-item"
-        >
-          <h2
-            className={featTiles.feature__tile__cont__title}
-            style={{ color: "#fff" }}
-          >
-            Kafka as Message broker
-          </h2>
-          <p
-            className={featTiles.feature__tile__cont__desc}
-            style={{ marginBottom: 20 }}
-          >
-            <b style={{ color: "#fff" }}>Explore Messages.</b> Kafka Messages
-            are now easy to browse, helping you to quickly test your stream
-            processing program.
-          </p>
-          <p className={featTiles.feature__tile__cont__desc}>
-            <b style={{ color: "#fff" }}>Topic Insights.</b> List all topic
-            configs, check how much disk size is consumed for a respective topic
-            or partition on the broker or find out how many messages exist in
-            your topic.
-          </p>
-        </div>
-        <div className={clsx(featTiles.tile__item__img)}>
-          <div className={clsx(featTiles.tile__img__box, "shadow--md")}>
-            <img
-              src="/img/pages/landing/kafka-msgs.png"
-              alt="Features split 03"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-)
 
 const Home = () => {
   const { siteConfig } = useDocusaurusContext()
@@ -646,10 +750,12 @@ const Home = () => {
       title={title}
     >
       <Top />
-      <FeaturesCard />
+      <SecondSection />
+      <FeaturesCards />
+      <SupportDB />
       <FeaturesTiles />
-      <WatchInDemo />
-      <FooterConsole />
+      <Pricing />
+      <GetStartedSec />
     </PageLayout>
   )
 }

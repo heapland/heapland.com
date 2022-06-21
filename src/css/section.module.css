@@ -147,6 +147,72 @@
 .margin__bottom__3 {
   margin-bottom: 3rem;
 }
+.github__name__icon,
+.join__on__discord {
+  display: flex;
+  justify-content: space-between;
+  color: #ffffff;
+  display: flex;
+  font-size: 38px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.github__name__icon:hover {
+  color: #fff;
+}
+.join__on__discord:hover {
+  color: #fff;
+}
+
+.get__started_sec {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8rem;
+  margin-bottom: 5rem;
+}
+
+.get__started__label {
+  font-size: 2rem;
+}
+
+.cmd__copy__box {
+  color: rgba(77, 82, 224, 1);
+  display: inline-flex;
+  padding: 4px;
+  font-size: 18px;
+  background: #ffffff;
+  margin-top: 20px;
+  align-items: center;
+  font-family: SFMono;
+  font-weight: 500;
+  padding-left: 20px;
+  border-radius: 12px 50px 50px 12px;
+}
+
+.dollar__sign {
+  color: rgba(77, 82, 224, 0.4);
+  margin-right: 10px;
+}
+.copy__btn {
+  width: 48px;
+  border: 0;
+  cursor: pointer;
+  height: 48px;
+  display: flex;
+  background: #e1d9f8;
+  align-items: center;
+  margin-left: 20px;
+  border-radius: 9999px;
+  justify-content: center;
+}
+
+.label {
+  font-size: 1.7rem;
+  margin-bottom: 12px;
+}
+
 @media (max-width: 1024px) {
   .section__footer--console {
     padding: 0 3rem;
@@ -163,6 +229,15 @@
 }
 
 @media (max-width: 996px) {
+  .get__started_sec {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px 0;
+  }
+  .cmd__copy__box {
+    align-self: flex-start;
+  }
+
   .section--inner {
     flex-direction: column;
   }
