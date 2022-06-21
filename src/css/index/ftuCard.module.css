@@ -158,6 +158,9 @@
     flex-direction: column;
     gap: 20px 0;
   }
+  .app__info {
+    margin-left: 0;
+  }
   .title {
     text-align: center;
   }
