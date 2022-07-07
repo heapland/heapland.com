@@ -1,281 +1,146 @@
-.jumbotron {
-  padding: 6rem 0 2rem 0;
-  display: flex;
-  /* flex-direction: column;
-  align-items: center;
-  position: relative; */
-}
 .hero-section {
-  background: url("/img/hero-bg.png") center/cover no-repeat;
   min-height: 600px;
+  margin-bottom: 8rem;
 }
-.jumbotron__actionbtns {
-  display: grid;
-  place-items: center;
+.jumbotron {
+  padding: 5rem 0 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.jub__left__content {
+  flex-basis: 50%;
+  padding-left: 6rem;
 }
 
-.jumbotron__center__title {
-  top: 70px;
+.jumbotron__title {
+  font-size: 4.2rem;
+  line-height: 1.2;
+  margin-bottom: 40px;
+  font-weight: 500;
+  margin-top: -30px;
 }
 
-.actionbtn {
-  min-width: 200px;
-  font-size: var(--font-size-normal);
+.view__repo__btn,
+.request__demo__btn {
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 16px;
+  align-items: center;
+  font-weight: 600;
+  line-height: 1;
+  padding-top: 15px;
+  white-space: nowrap;
+  padding-left: 24px;
+  border-radius: 12px;
+  padding-right: 24px;
+  padding-bottom: 15px;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 15px;
+  text-decoration: none;
+  flex-basis: 50%;
 }
-.typed__text {
-  color: var(--palette-pink);
+
+.jub__left__content > .jub__action__btns > .view__repo__btn {
+  color: #ffffff;
+  border: 0;
+  background: linear-gradient(94.04deg, #7934da 0%, #4d52e0 101.2%);
+  margin-right: 15px;
+}
+
+.jub__left__content > .jub__action__btns > .request__demo__btn {
+  color: #ffffff;
+  border: 2px solid rgba(220, 207, 233, 0.16);
+}
+
+.trial__link {
+  font-size: 16px;
+  color: #b3bfd7;
+  flex-basis: 100%;
+}
+
+.jub__right__content {
+  flex-basis: 45%;
+}
+.jub__right__content > img {
+  max-height: 600px;
 }
 
 .jumbotron__description {
-  margin: 0;
-  padding-right: 2rem;
-  color: var(--palette-pink);
-  font-size: var(--font-size-large);
+  color: var(--palette-white-darker);
+  font-size: var(--font-size-big-2);
 }
 
-.jumbotron__image {
-  margin: 2rem auto 0 auto;
-  max-width: 1200px;
-}
-.jumbotron__image > img {
-  border-radius: var(--ifm-global-img-border-radius);
-  width: 100vw;
-  height: auto;
-  object-fit: cover;
-}
-.gigahex_installer_banner {
-  transform: translate(0, 180px);
-}
+@media (max-width: 1160px) {
+  .jumbotron__title {
+    font-size: 3rem;
+  }
+  .jumbotron {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .jub__right__content {
+    flex-basis: 80%;
+    margin: 0 auto;
+    margin-top: 2rem;
+  }
 
-.gigahex_installer_container {
-  background-color: var(--palette-rock);
-  box-shadow: 0px 30px 60px rgb(0 0 0 / 16%);
-  max-width: 1150px;
-  border-radius: var(--ifm-global-border-radius);
-  overflow: hidden;
-}
-
-.os_tab {
-  border-radius: 0;
-  cursor: pointer;
-}
-
-.installer__title {
-  font-size: 2rem;
-}
-.doller__sign {
-  color: #58afb9;
-  font-weight: 600;
-}
-.docker__logo {
-  min-width: 150px;
-  min-height: 150px;
-  border-radius: 50%;
-  background-color: #c1e5f7;
-}
-.installer__code {
-  font-size: 1.5rem;
-  color: #000 !important;
-  font-weight: 300 !important;
-  font-family: Fira Code, SFMono-Regular, Consolas, Liberation Mono, Menlo,
-    monospace;
-}
-.code_gray {
-  color: gray !important;
-}
-.container_code {
-  color: #000;
-  margin-bottom: 0;
-  padding: 5px 10px;
-  background-color: transparent;
-}
-.installer__left__content {
-  padding: 2rem 1rem !important;
-}
-.installer__right_content {
-  padding: 3rem 2rem;
-  min-height: 300px;
-  background-color: #f4f9fb;
-}
-.installer__right_content > div {
-  padding: 3rem;
-}
-.cmd__copy__btn {
-  float: right;
-  padding: 0 10px 0 20px;
-  height: 40px;
-  margin-top: 25px;
-  font-size: 0.9rem;
-}
-.installer__feature {
-  font-size: 1.2rem;
-  font-weight: 400;
-  color: #000 !important;
-  display: flex;
-}
-.installer__feature > svg {
-  font-size: 32px;
-}
-.contact_us_desc {
-  color: #747474 !important;
-  margin: 0;
-  font-size: 1.2rem;
-  font-family: Inter;
-  font-weight: 400;
-}
-
-@media (max-width: 1024px) {
-  .actionbtn {
-    font-size: var(--font-size-big-1);
+  .jumbotron__description {
+    max-width: 800px;
+    text-align: left;
+    font-size: var(--font-size-large);
   }
-  .jumbotron__image > img {
-    width: 85vw;
-  }
-  .jumbotron__image {
-    /* min-height: 900px; */
-    padding: 0;
-  }
-  .gigahex_installer_container {
-    max-width: 900px;
-    float: left;
-  }
-  .installer__title {
-    font-size: 2rem;
-  }
-  .installer__feature {
-    font-size: 1rem;
-  }
-  .docker__logo {
-    min-width: 130px;
-    min-height: 130px;
-  }
-  .cmd__copy__btn {
-    font-size: 0.9rem;
+  .hero-section {
+    margin-bottom: 5rem;
   }
 }
 
 @media (max-width: 996px) {
-  .jumbotron__center__title h1 {
-    font-size: 3rem;
-  }
-  .gigahex_installer_banner {
-    padding: 0 3rem;
-  }
-  .installer__title {
-    margin-top: 20px;
-    text-align: center;
-  }
-  .installer__feature {
-    text-align: center;
-    max-width: 300px;
-    margin: 0 auto;
-    line-height: 2;
-  }
-  .cmd__copy__btn {
-    margin-left: 50px;
-    float: none;
-  }
-  .jumbotron {
-    padding-top: 2rem;
-    align-items: center;
-    flex-basis: auto;
-  }
-  .jumbotron__description {
-    padding: 0;
-    text-align: center;
-  }
-  .os_tabs_container {
-    flex-direction: row !important;
-  }
 }
 
 @media (max-width: 776px) {
-  .gigahex_installer_banner {
-    transform: translate(0, -10px);
-  }
-  .gigahex_installer_banner {
-    padding: 0 4rem;
-  }
   .jumbotron {
-    padding: 3rem 2rem 2rem 2rem;
+    padding-top: 4rem;
   }
-  .hero-section {
-    height: 450px;
+  .jub__left__content {
+    padding: 0 20px 20px 20px;
   }
-  .jumbotron__image {
-    height: 200px;
-    padding: 0;
+  .jumbotron__title {
+    margin-bottom: 20px;
   }
-  /* .jumbotron__image > img {
-    height: 360px;
-  } */
-  .jumbotron__actionbtns {
-    grid-template-columns: 1fr;
-    grid-row-gap: 15px;
+  .jub__right__content {
+    padding-left: 20px;
+  }
+  .jub__action__btns {
+    display: flex;
+    flex-direction: column;
+  }
+  .view__repo__btn,
+  .request__demo__btn {
+    margin-top: 40px;
+    margin-bottom: 10px;
+  }
+  .jub__left__content > .jub__action__btns > .view__repo__btn {
+    margin-right: 0;
+  }
+  .request__demo__btn {
+    margin-top: 15px;
+  }
+  .jub__action__btns br {
+    display: none;
   }
 }
 
 @media (max-width: 426px) {
+  .jub__right__content {
+    margin-top: 10px;
+  }
   .hero-section {
-    height: 300px;
-  }
-  .jumbotron {
-    padding: 4rem 1rem;
-    align-items: flex-start;
-  }
-  .gigahex_installer_banner {
-    transform: translate(0, -130px);
-  }
-  .jumbotron__center__title h1 {
-    font-size: 2.5rem !important;
-  }
-  .installer__title {
-    margin-top: 20px;
-    text-align: center;
-  }
-  .installer__feature {
-    font-size: 1rem;
-  }
-  .jumbotron__image {
-    min-height: 300px;
-  }
-  .installer__right_content > div {
-    padding: 2rem 0rem;
-  }
-  .actionbtn {
-    font-size: var(--font-size-normal);
-    margin-left: 70px;
-    margin-top: 40px;
-  }
-  .installer__right_content {
-    min-height: 250px;
-  }
-  .container_code {
-    max-width: 350px;
+    margin-bottom: 2rem;
   }
 }
 
 @media (max-width: 376px) {
-  .jumbotron__image {
-    min-height: 100px;
-  }
-  .gigahex_installer_banner {
-    transform: translate(0, -90px);
-  }
-  .jumbotron__center__title {
-    top: 30px;
-  }
-  .gigahex_installer_container {
-    width: 330px;
-  }
-  .installer__right_content > div {
-    padding: 2rem 0.5rem;
-  }
-  .actionbtn {
-    margin-left: 40px;
-  }
-  .container_code {
-    font-size: 0.9rem;
-    max-width: 300px;
-  }
 }

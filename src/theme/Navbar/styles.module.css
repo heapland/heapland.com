@@ -22,15 +22,16 @@
 .brand {
   display: block;
   height: 30px;
-  width: 120px;
+  width: 70px;
   margin-right: var(--ifm-navbar-item-padding-horizontal);
   border: 0;
   overflow: hidden;
   text-indent: -999px;
   white-space: nowrap;
-  background-image: url(/static/img/navbar/logo-min.png);
+  background-image: url(/static/img/heapland.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
+  margin-top: 5px;
 }
 :global(.navbar) {
   box-shadow: none;
@@ -94,6 +95,10 @@
 :global(.DocSearch-Button-Key) {
   display: none !important;
 }
+:global(.navbar__toggle) {
+  color: #000;
+  margin-top: 5px;
+}
 
 :global(.navbar__link),
 :global(.dropdown__link) {
@@ -103,10 +108,6 @@
 @media (max-width: 768px) {
   :global(.DocSearch-Button) {
     margin: 0 !important;
-  }
-
-  :global(.navbar__brand) {
-    margin: 0;
   }
 }
 

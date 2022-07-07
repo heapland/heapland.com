@@ -1,7 +1,7 @@
 {
-  "name": "Gigahex | Desktop app for Spark and Hadoop",
-  "short_name": "Gigahex",
-  "description": "Gigahex website and documentation",
+  "name": "Heapland | Universal interface for all your data services",
+  "short_name": "Heapland",
+  "description": "Heapland website and documentation",
   "start_url": "/",
   "background_color": "#21222c",
   "display": "minimal-ui",

@@ -63,16 +63,16 @@ const Footer = () => {
         >
           <div className={clsx(footerStyles.footer__logo__container)}>
             <img
-              alt="Gigahex logo"
+              alt="Heapland logo"
               className={footerStyles.footer__logo}
               height={30}
-              src="/img/navbar/logo-min.png"
-              title="Gigahex - Desktop app for Spark and Hadoop"
-              width={120}
+              src="/img/heapland.png"
+              title="Heapland - Universal interface for all your data services"
+              width={60}
             />
-            {/* <div className={clsx(footerStyles.footer__brand__name)}>
-              Gigahex
-            </div> */}
+            <div className={clsx(footerStyles.footer__brand__name)}>
+              Heapland
+            </div>
           </div>
           <p className={footerStyles.footer__tagline}>{siteConfig.tagline}</p>
         </div>

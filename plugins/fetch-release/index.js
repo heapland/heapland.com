@@ -4,7 +4,7 @@ module.exports = (context) => ({
   name: "fetch-release",
   async loadContent() {
     const response = await nodeFetch(
-      `https://api.github.com/repos/gigahexhq/gigahex.com/releases/tags/${context.siteConfig.customFields.version}`,
+      `https://api.github.com/repos/heapland/heapland.com/releases/tags/${context.siteConfig.customFields.version}`,
     )
 
     const data = await response.json()

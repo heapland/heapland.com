@@ -189,11 +189,22 @@ nav {
 html,
 body {
   height: 100%;
+  overflow-x: hidden;
+}
+html {
+  background: none !important;
 }
 
 body {
   margin: 0;
   transition: var(--ifm-transition-fast) ease color;
+  color: #b3bfd7;
+  font-size: 20px;
+  background: #06000f
+    url(https://coder.com/_next/static/media/PageBackground.dee36776.svg)
+    no-repeat top center;
+  line-height: 180%;
+  background-size: cover;
 }
 
 #__docusaurus {
@@ -355,4 +366,16 @@ div.sidebar_node_modules-\@docusaurus-theme-classic-lib-next-theme-DocSidebar- {
 }
 .microsoft-icon {
   margin-right: 10px !important;
+}
+
+.footer_src-theme-Footer- {
+  background: none !important;
+}
+
+.text__bg__gradient {
+  color: transparent;
+  background: linear-gradient(90deg, #49de82 0%, #15b4c5 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparenttext;
 }

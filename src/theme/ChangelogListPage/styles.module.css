@@ -1,33 +1,3 @@
-.jumbotron {
-  display: flex;
-  min-height: 300px;
-  max-width: 1000px;
-  justify-content: flex-start;
-  margin: 0 auto;
-  padding: 3rem;
-  border-bottom: 1px solid var(--palette-border-grey);
-}
-
-.jumbotron__subtitle {
-  margin-bottom: 5px;
-  text-align: start;
-  font-size: var(--font-size-large);
-}
-
-.jumbotron__title {
-  margin-bottom: 14px;
-}
-
-.jumbotron__cta {
-  margin-top: 2rem;
-  align-self: flex-start;
-}
-
-.jumbotron__center {
-  display: flex;
-  flex-direction: column;
-}
-
 .social__links > a {
   margin-right: 10px;
   color: var(--palette-rock);

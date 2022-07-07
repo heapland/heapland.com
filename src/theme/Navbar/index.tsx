@@ -112,14 +112,14 @@ function Navbar(): JSX.Element {
                   </svg>
                 </div>
                 <Link className={clsx("navbar__brand", styles.brand)} to="/">
-                  Gigahex
+                  heapland
                 </Link>
 
                 <GitHubButton
-                  href="https://github.com/gigahexhq/console"
+                  href="https://github.com/heapland/heapland"
                   data-icon="octicon-star"
                   data-show-count="true"
-                  aria-label="Star gigahexhq/console on GitHub"
+                  aria-label="Star heapland on GitHub"
                 >
                   Star
                 </GitHubButton>
@@ -154,7 +154,7 @@ function Navbar(): JSX.Element {
                   href="/"
                   onClick={hideSidebar}
                 >
-                  Gigahex
+                  Heapland
                 </a>
               </div>
               <div className="navbar-sidebar__items">
