@@ -17,8 +17,8 @@
 }
 
 .section--accent {
-  --ifm-link-hover-color: var(--palette-pink);
-  --ifm-link-color: var(--palette-pink);
+  --ifm-link-hover-color: var(--palette-green);
+  --ifm-link-color: var(--palette-green);
   padding-top: 7rem;
   padding-bottom: 7.5rem;
 }
@@ -39,8 +39,8 @@
 }
 
 .section--slim--accent {
-  --ifm-link-hover-color: var(--palette-pink);
-  --ifm-link-color: var(--palette-pink);
+  --ifm-link-hover-color: var(--palette-green);
+  --ifm-link-color: var(--palette-green);
   padding-top: 7rem;
   padding-bottom: 1.5rem;
 }

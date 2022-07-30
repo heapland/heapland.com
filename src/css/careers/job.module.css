@@ -3,7 +3,7 @@
   display: flex;
   padding: 1rem;
   flex-direction: column;
-  background: var(--palette-pink);
+  background: var(--palette-green);
   border-radius: var(--ifm-global-border-radius);
   border: 1px solid transparent;
   color: var(--palette-white);

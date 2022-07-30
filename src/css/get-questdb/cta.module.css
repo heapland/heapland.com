@@ -19,7 +19,7 @@
 }
 
 .cta__version {
-  color: var(--palette-pink);
+  color: var(--palette-green);
 }
 
 @media (max-width: 996px) {

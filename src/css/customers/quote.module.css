@@ -40,7 +40,7 @@
   top: 0.7rem;
   font-size: var(--font-size-big-3);
   line-height: 0;
-  color: var(--palette-pink);
+  color: var(--palette-green);
 }
 
 .quote__text:before {

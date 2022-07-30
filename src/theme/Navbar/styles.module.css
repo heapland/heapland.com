@@ -51,6 +51,12 @@
   align-items: flex-start;
   justify-content: center;
 }
+:global(.navbar__link--active) {
+  color: var(--palette-green);
+}
+:global(.navbar__link:hover) {
+  color: var(--palette-green);
+}
 :global(.navbar__items) > span {
   margin-top: 6px;
 }

@@ -63,7 +63,7 @@
 
 .quote__chevron {
   margin-right: 0.25rem;
-  color: var(--palette-pink);
+  color: var(--palette-green);
   font-weight: var(--ifm-font-weight-bold);
 }
 
@@ -133,7 +133,7 @@
 }
 
 .controls__pin--selected {
-  background: var(--palette-pink);
+  background: var(--palette-green);
 }
 
 .controls__pin:last-of-type {
