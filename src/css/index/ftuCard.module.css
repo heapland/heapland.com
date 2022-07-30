@@ -43,7 +43,9 @@
 }
 
 .semi__title {
-  font-size: 2rem;
+  text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
 }
 
 .features__cards {
@@ -76,10 +78,33 @@
   bottom: 10px;
   right: 20px;
 }
+.db__logo_containers{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.db__logo_containers > a {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: gray;
+}
+
+.supportdb__db_logo{
+  width: 4.5rem;
+  height: 4.5rem;
+  background: #2f3141;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .supportdb__container {
   margin-top: 10rem;
   margin-bottom: 6rem;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;

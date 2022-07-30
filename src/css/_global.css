@@ -6,7 +6,7 @@
 
 :root {
   --palette-charade: #fbfbfd;
-  --palette-gray: #636363;
+  --palette-gray: #9ba4b7;
   --palette-border-grey: #cabbe9;
   --palette-green: #3ec234;
   --palette-midnight: #141725;
@@ -376,6 +376,7 @@ div.sidebar_node_modules-\@docusaurus-theme-classic-lib-next-theme-DocSidebar- {
   color: transparent;
   background: linear-gradient(90deg, #49de82 0%, #15b4c5 100%);
   background-clip: text;
+  text-align: center;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparenttext;
 }

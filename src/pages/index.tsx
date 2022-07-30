@@ -16,6 +16,7 @@ import ftuCss from "../css/index/ftuCard.module.css"
 import seCss from "../css/section.module.css"
 import featTiles from "../css/index/featureTiles.module.css"
 import priCss from "../css/index/pricing.module.css"
+import { Link } from "react-router-dom"
 
 type IFeatureCard = {
   title: any
@@ -42,15 +43,12 @@ const Top = () => {
       <div className={clsx(juCss.jumbotron)}>
         <div className={juCss.jub__left__content}>
           <div className={juCss.jumbotron__title}>
-            Remote development
-            <br /> on
-            <span className="text__bg__gradient"> your infrastructure</span>
+            Universal interface
+            <br /> for
+            <span className="text__bg__gradient"> your storage services</span>
           </div>
           <div className={juCss.jumbotron__description}>
-            Offload your team development from local workstations to cloud
-            servers. Onboard developers in minutes. Build, test and compile at
-            the speed of the cloud. Keep your source code and data behind your
-            firewall
+            Browse file systems, query databases and stream messages from message brokers all at one place.
           </div>
 
           <div className={clsx(juCss.jub__action__btns)}>
@@ -72,18 +70,16 @@ const Top = () => {
               </svg>
             </a>
             <a href="#" className={juCss.request__demo__btn}>
-              Request Demo
+              Watch Demo
             </a>
 
             <br />
-            <a href="#" className={juCss.trial__link}>
-              Looking for Coder v1? Click to start a trial.
-            </a>
+           
           </div>
         </div>
         <div className={juCss.jub__right__content}>
           <img
-            src="https://coder.com/_next/static/media/terminal.e7cc3378.svg"
+            src="/static/img/pages/landing/browsers-screenshot.png"
             alt=""
           />
         </div>
@@ -92,98 +88,6 @@ const Top = () => {
   )
 }
 
-const SecondSection = () => {
-  const [githubStart, setGitHubStart] = React.useState(0)
-  const fetchStart = async () => {
-    const res = await fetch(
-      "https://api.github.com/repos/heapland/heapland/stargazers",
-    )
-    const result = await res.json()
-    setGitHubStart(result.length)
-  }
-  React.useEffect(() => {
-    fetchStart()
-  }, [])
-  return (
-    <section
-      className={clsx(
-        seCss.section,
-        seCss["section--center"],
-        ftuCss.second__section,
-      )}
-    >
-      <div className={clsx(ftuCss.second__section__title)}>
-        <div className={clsx(ftuCss.title)}>From the developers of</div>
-        <div className={ftuCss.app__info}>
-          <div className={ftuCss.app__name}>
-            <svg
-              focusable="false"
-              width={30}
-              height={30}
-              viewBox="0 0 30 30"
-              aria-hidden="true"
-            >
-              <path
-                d="M15 0C6.71625 0 0 6.69143 0 14.9467C0 21.5503 4.29844 27.1534 10.2581 29.1292C11.0081 29.2674 11.2838 28.805 11.2838 28.4099C11.2838 28.0539 11.2697 26.876 11.2631 25.627C7.08937 26.5313 6.20906 23.8633 6.20906 23.8633C5.52656 22.136 4.54406 21.6764 4.54406 21.6764C3.18281 20.7488 4.64719 20.7674 4.64719 20.7674C6.15281 20.873 6.94594 22.3079 6.94594 22.3079C8.28375 24.5929 10.455 23.9324 11.3109 23.5503C11.445 22.5844 11.8341 21.9249 12.2634 21.5512C8.93156 21.1738 5.42906 19.8912 5.42906 14.1648C5.42906 12.5328 6.015 11.1997 6.975 10.1525C6.81937 9.77605 6.30562 8.25616 7.12031 6.19726C7.12031 6.19726 8.38031 5.79557 11.2463 7.72929C12.4425 7.39766 13.7259 7.23231 15.0009 7.22578C16.275 7.23138 17.5594 7.39766 18.7584 7.72929C21.6216 5.79557 22.8787 6.19726 22.8787 6.19726C23.6953 8.25616 23.1816 9.77605 23.0259 10.1525C23.9878 11.1988 24.57 12.5328 24.57 14.1648C24.57 19.9052 21.0609 21.1691 17.7206 21.54C18.2587 22.0043 18.7378 22.9132 18.7378 24.3079C18.7378 26.308 18.72 27.9176 18.72 28.4099C18.72 28.8078 18.99 29.274 19.7503 29.1273C25.7072 27.1487 30 21.5484 30 14.9467C30 6.69143 23.2838 0 15 0Z"
-                fill="url(#paint0_linear_140_567)"
-              ></path>
-              <defs>
-                <linearGradient
-                  id="paint0_linear_140_567"
-                  x1="0"
-                  y1="2.4829"
-                  x2="30"
-                  y2="2.4829"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop stopColor="#49DE82"></stop>
-                  <stop offset="1" stopColor="#15B4C5"></stop>
-                </linearGradient>
-              </defs>
-            </svg>
-
-            <span className="text__bg__gradient">heapland</span>
-          </div>
-          <div className={clsx(ftuCss.github__star, "text__bg__gradient")}>
-            <svg
-              className="MuiSvgIcon-root jss504"
-              focusable="false"
-              viewBox="0 0 16 16"
-              aria-hidden="true"
-              width="30"
-              height="30"
-            >
-              <path
-                d="M15.639 6.88385C15.8003 6.74751 15.9151 6.56526 15.9678 6.36199C16.0204 6.15872 16.0083 5.94433 15.9332 5.74811C15.858 5.55188 15.7234 5.38338 15.5478 5.26561C15.3722 5.14784 15.1641 5.08655 14.952 5.0901H10.7885C10.7179 5.09007 10.649 5.06853 10.5912 5.02841C10.5334 4.98829 10.4896 4.93154 10.4656 4.86588L8.96093 0.653281C8.88615 0.461013 8.7542 0.29567 8.58249 0.179048C8.41078 0.0624257 8.20737 0 7.99906 0C7.79076 0 7.58734 0.0624257 7.41563 0.179048C7.24392 0.29567 7.11198 0.461013 7.03719 0.653281L5.53256 4.86588C5.50855 4.93154 5.46468 4.98829 5.4069 5.02841C5.34912 5.06853 5.28024 5.09007 5.20964 5.0901H1.02551C0.812892 5.09069 0.605659 5.1563 0.432226 5.27795C0.258792 5.39959 0.127649 5.5713 0.0567757 5.76955C-0.0113795 5.96552 -0.0183405 6.17724 0.0367977 6.37718C0.0919359 6.57712 0.206623 6.75602 0.365948 6.89064L3.92486 9.81228C3.97834 9.85544 4.01742 9.91353 4.03703 9.97897C4.05664 10.0444 4.05586 10.1142 4.03479 10.1792L2.53702 14.616C2.46648 14.8214 2.46407 15.0438 2.53014 15.2506C2.59621 15.4575 2.72731 15.6382 2.90436 15.7663C3.08141 15.8944 3.29518 15.9632 3.51456 15.9629C3.73394 15.9625 3.94748 15.893 4.12411 15.7643L7.79982 13.1008C7.85821 13.0573 7.92936 13.0337 8.0025 13.0337C8.07563 13.0337 8.14678 13.0573 8.20518 13.1008L11.874 15.7643C12.0493 15.9085 12.268 15.9912 12.4958 15.9993C12.7237 16.0075 12.9478 15.9407 13.1332 15.8094C13.3186 15.6782 13.4547 15.4898 13.5202 15.2739C13.5858 15.0579 13.5771 14.8265 13.4955 14.616L11.9977 10.1792C11.9766 10.1142 11.9758 10.0444 11.9954 9.97897C12.0151 9.91353 12.0541 9.85544 12.1076 9.81228L15.639 6.88385Z"
-                fill="url(#paint0_linear_140_380)"
-              ></path>
-              <defs>
-                <linearGradient
-                  id="paint0_linear_140_380"
-                  x1="0"
-                  y1="1.3626"
-                  x2="16"
-                  y2="1.3626"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop stopColor="#49DE82"></stop>
-                  <stop offset="1" stopColor="#15B4C5"></stop>
-                </linearGradient>
-              </defs>
-            </svg>
-            {githubStart}
-          </div>
-        </div>
-      </div>
-      <div className={clsx("container", ftuCss.image__container)}>
-        <img
-          src="https://coder.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FScreenshot.01597d0c.png&w=3840&q=75"
-          alt=""
-        />
-      </div>
-    </section>
-  )
-}
 const FeaturesCards = () => {
   return (
     <section
@@ -193,15 +97,15 @@ const FeaturesCards = () => {
         ftuCss.features__card__container,
       )}
     >
-      <div className={clsx(ftuCss.semi__title)}>
-        Code more <span className="text__bg__gradient">with Coder</span>
-      </div>
+      <h1 className={clsx(ftuCss.semi__title)}>
+        Develop faster <span className="text__bg__gradient">with Heapland</span>
+      </h1>
       <div className={clsx(ftuCss.features__cards)}>
         <FeatureCard
           title={
             <>
-              <span className="text__bg__gradient">Accelerate</span> builds,
-              tests, training and code tools
+              <span className="text__bg__gradient">Accelerate</span> development,
+              debugging and analysis of application data and logs.
             </>
           }
           icon={"https://coder.com/_next/static/media/accelerate.90af2ebe.svg"}
@@ -209,8 +113,8 @@ const FeaturesCards = () => {
         <FeatureCard
           title={
             <>
-              <span className="text__bg__gradient">Commit </span>
-              on day one with templatized workspaces
+              <span className="text__bg__gradient">Connect </span>
+              with storage services running on public cloud or OnPremise infrastructure.
             </>
           }
           icon={"https://coder.com/_next/static/media/commit.e878e129.svg"}
@@ -218,8 +122,8 @@ const FeaturesCards = () => {
         <FeatureCard
           title={
             <>
-              <span className="text__bg__gradient">Secure </span>
-              code and data behind your corporate firewall
+              <span className="text__bg__gradient">Securely </span>
+              run heapland to access the data behind your corporate firewall.
             </>
           }
           icon={"https://coder.com/_next/static/media/secure.75de3c95.svg"}
@@ -230,66 +134,154 @@ const FeaturesCards = () => {
 }
 
 const SupportDB = () => {
+
+  const [storage, setStorageCategory] = React.useState<{
+    storageCategory: string
+  }>({
+    storageCategory: "dbms",
+   
+  })
+
+  const onClickStorageTab = (storageCat: string) => {
+    switch (storageCat) {
+      case "dbms":
+        setStorageCategory({
+          storageCategory: storageCat,
+        });
+        break
+      case "fs":
+        setStorageCategory({
+          storageCategory: storageCat,
+        });
+        break
+      case "Mac":
+        setStorageCategory({
+          storageCategory: storageCat,
+        });
+        break
+  
+    }
+  }
+
+  const getActiveTab = (storageCategory: string, selectedStorage: string) => {
+    if (storageCategory === selectedStorage) {
+      return "tabs__item--active"
+    } else {
+      return ""
+    }
+  }
   return (
     <section className={clsx("container", ftuCss.supportdb__container)}>
       <div className={ftuCss.supportdb__left__content}>
-        <div className={ftuCss.supportdb__first__title}>
-          <img
-            src="https://coder.com/_next/static/media/Terraform.e56ac05c.svg"
-            alt=""
-          />
-          <span>Powered</span>
-        </div>
+        
+        
         <div
           className={clsx(ftuCss.supportdb__scnd__title, "text__bg__gradient")}
         >
-          Developer Workspaces
+          Works with your favorite storage service
         </div>
+        <div className={clsx("row", juCss.gigahex_installer_container)}>
+          <div className={clsx("col col--12")} style={{ padding: 0 }}>
+        <ul className={clsx("tabs tabs--block", juCss.os_tabs_container)}>
+              <li
+                className={clsx(
+                  "tabs__item",
+                  juCss.os_tab,
+                  getActiveTab("dbms", storage.storageCategory),
+                )}
+                onClick={() => onClickStorageTab("dbms")}
+              >
+                Databases
+              </li>
+              <li
+                className={clsx(
+                  "tabs__item",
+                  juCss.os_tab,
+                  getActiveTab("fs", storage.storageCategory),
+                )}
+                onClick={() => onClickStorageTab("fs")}
+              >
+                Distributed File systems
+              </li>
+              <li
+                className={clsx(
+                  "tabs__item",
+                  juCss.os_tab,
+                  getActiveTab("Ubuntu", storage.storageCategory),
+                )}
+                onClick={() => onClickStorageTab("streams")}
+              >
+                Streams
+              </li>
+            </ul>
+            </div>
+            </div>
 
-        <div className={clsx(ftuCss.supportdb__desc)}>
-          Use 2000+ Terraform providers to make any resource a development
-          workspace.
+        <div className={ftuCss.db__logo_containers}>
+        <Link to={"/"}>
+        <figure data-for="figure-tooltip-Amazon Athena" data-tip="Amazon Athena" title="Amazon Athena" className={ftuCss.supportdb__db_logo} >
+          <img src="https://popsql.com/static/landing/first-section/athena.svg" alt="Amazon Athena" loading="lazy"/>
+          </figure>
+          <span>PostgreSQL</span>
+        </Link>
+        <Link to={"/"}>
+        <figure data-for="figure-tooltip-Amazon Athena" data-tip="Amazon Athena" title="Amazon Athena" className={ftuCss.supportdb__db_logo} >
+          <img src="https://popsql.com/static/landing/first-section/azure-synapse.svg" alt="Amazon Athena" loading="lazy"/>
+          </figure>
+          <span>MariaDB</span>
+        </Link>
+        <Link to={"/"}>
+        <figure data-for="figure-tooltip-Amazon Athena" data-tip="Amazon Athena" title="Amazon Athena" className={ftuCss.supportdb__db_logo} >
+          <img src="https://popsql.com/static/landing/first-section/athena.svg" alt="Amazon Athena" loading="lazy"/>
+          </figure>
+          <span>MySQL</span>
+        </Link>
+        <Link to={"/"}>
+        <figure data-for="figure-tooltip-Amazon Athena" data-tip="Amazon Athena" title="Amazon Athena" className={ftuCss.supportdb__db_logo} >
+          <img src="https://popsql.com/static/landing/first-section/azure-synapse.svg" alt="Amazon Athena" loading="lazy"/>
+          </figure>
+          <span>Cassandra</span>
+        </Link>
+        <Link to={"/"}>
+        <figure data-for="figure-tooltip-Amazon Athena" data-tip="Amazon Athena" title="Amazon Athena" className={ftuCss.supportdb__db_logo} >
+          <img src="https://popsql.com/static/landing/first-section/athena.svg" alt="Amazon Athena" loading="lazy"/>
+          </figure>
+          <span>Amazon S3</span>
+        </Link>
+        <Link to={"/"}>
+        <figure data-for="figure-tooltip-Amazon Athena" data-tip="Amazon Athena" title="Amazon Athena" className={ftuCss.supportdb__db_logo} >
+          <img src="https://popsql.com/static/landing/first-section/azure-synapse.svg" alt="Amazon Athena" loading="lazy"/>
+          </figure>
+          <span>Kafka</span>
+        </Link>
+        <Link to={"/"}>
+        <figure data-for="figure-tooltip-Amazon Athena" data-tip="Amazon Athena" title="Amazon Athena" className={ftuCss.supportdb__db_logo} >
+          <img src="https://popsql.com/static/landing/first-section/athena.svg" alt="Amazon Athena" loading="lazy"/>
+          </figure>
+          <span>MongoDB</span>
+        </Link>
+        <Link to={"/"}>
+        <figure data-for="figure-tooltip-Amazon Athena" data-tip="Amazon Athena" title="Amazon Athena" className={ftuCss.supportdb__db_logo} >
+          <img src="https://popsql.com/static/landing/first-section/azure-synapse.svg" alt="Amazon Athena" loading="lazy"/>
+          </figure>
+          <span>MongoDB</span>
+        </Link>
+        <Link to={"/"}>
+        <figure data-for="figure-tooltip-Amazon Athena" data-tip="Amazon Athena" title="Amazon Athena" className={ftuCss.supportdb__db_logo} >
+          <img src="https://popsql.com/static/landing/first-section/athena.svg" alt="Amazon Athena" loading="lazy"/>
+          </figure>
+          <span>MongoDB</span>
+        </Link>
+        <Link to={"/"}>
+        <figure data-for="figure-tooltip-Amazon Athena" data-tip="Amazon Athena" title="Amazon Athena" className={ftuCss.supportdb__db_logo} >
+          <img src="https://popsql.com/static/landing/first-section/azure-synapse.svg" alt="Amazon Athena" loading="lazy"/>
+          </figure>
+          <span>MongoDB</span>
+        </Link>
         </div>
       </div>
 
-      <div className={ftuCss.supportdb__right__content}>
-        <img
-          src="https://coder.com/_next/static/media/GoogleCloud.81d2574b.svg"
-          alt=""
-        />
-        <img
-          src="https://coder.com/_next/static/media/Azure.8f3f2c08.svg"
-          alt=""
-        />
-        <img
-          src="https://coder.com/_next/static/media/GoogleCloud.81d2574b.svg"
-          alt=""
-        />
-        <img
-          src="https://coder.com/_next/static/media/Docker.639ccc04.svg"
-          alt=""
-        />
-        <img
-          src="https://coder.com/_next/static/media/GoogleCloud.81d2574b.svg"
-          alt=""
-        />
-        <img
-          src="https://coder.com/_next/static/media/GoogleCloud.81d2574b.svg"
-          alt=""
-        />
-        <img
-          src="https://coder.com/_next/static/media/GoogleCloud.81d2574b.svg"
-          alt=""
-        />
-        <img
-          src="https://coder.com/_next/static/media/VSCode.cec8cf67.svg"
-          alt=""
-        />
-        <img
-          src="https://coder.com/_next/static/media/GoogleCloud.81d2574b.svg"
-          alt=""
-        />
-      </div>
+      
     </section>
   )
 }
@@ -608,7 +600,7 @@ const Pricing = () => {
             </ul>
           </div>
           <a href="#" className={priCss.request__btn}>
-            Request Demo
+            Watch Demo
           </a>
         </div>
       </div>
@@ -761,7 +753,7 @@ const Home = () => {
       title={title}
     >
       <Top />
-      <SecondSection />
+      
       <FeaturesCards />
       <SupportDB />
       <FeaturesTiles />

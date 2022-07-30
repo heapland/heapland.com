@@ -119,6 +119,7 @@ function Navbar(): JSX.Element {
                   href="https://github.com/heapland/heapland"
                   data-icon="octicon-star"
                   data-show-count="true"
+                  data-color-scheme="no-preference: dark; light: dark_dimmed; dark: light;"
                   aria-label="Star heapland on GitHub"
                 >
                   Star
