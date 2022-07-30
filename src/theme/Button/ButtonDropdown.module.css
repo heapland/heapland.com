@@ -12,7 +12,7 @@
   width: 100%;
   height: 100%;
   color: var(--palette-rock);
-  background-color: var(--palette-pink);
+  background-color: var(--palette-green);
   margin-bottom: 10px;
   font-size: var(--font-size-small);
   border-radius: calc(var(--ifm-global-border-radius) / 2);
@@ -33,7 +33,7 @@
 }
 .dropdown__btn:hover {
   color: var(--palette-rock);
-  background-color: var(--palette-pink-darker);
+  background-color: var(--palette-green-darker);
 }
 
 @media (max-width: 996px) {

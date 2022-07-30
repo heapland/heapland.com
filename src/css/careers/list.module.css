@@ -11,5 +11,5 @@
 .list__item::before {
   content: ">";
   margin-right: 1rem;
-  color: var(--palette-pink);
+  color: var(--palette-green);
 }

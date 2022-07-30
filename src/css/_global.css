@@ -11,9 +11,9 @@
   --palette-green: #3ec234;
   --palette-midnight: #141725;
   --palette-pale-blue: #b1b5d3;
-  --palette-pink: #5446d1;
+  --palette-green: #52b788;
   --palette-blue: #5658dd;
-  --palette-pink-darker: #552aa5;
+  --palette-green-darker: #552aa5;
   --palette--black: #0f0f0f;
   --palette-rock: #fff;
   --palette-dark-blue: #0d1e4b;
@@ -60,7 +60,7 @@
   --ifm-color-emphasis-300: var(--palette-pale-blue);
   --ifm-color-primary: var(--palette-blue);
   --ifm-color-primary-dark: #c93261;
-  --ifm-color-primary-darker: var(--palette-pink-darker);
+  --ifm-color-primary-darker: var(--palette-green-darker);
   --ifm-color-primary-darkest: #9c274b;
   --ifm-color-primary-light: #d75c82;
   --ifm-color-primary-lighter: #d9688b;
@@ -132,7 +132,7 @@ html[data-theme="dark"] .DocSearch {
 
 nav {
   --ifm-font-size-base: var(--font-size-normal);
-  --ifm-link-color: var(--palette-pink);
+  --ifm-link-color: var(--palette-green);
 }
 
 .docusaurus-highlight-code-line {
@@ -330,11 +330,11 @@ div.sidebar_node_modules-\@docusaurus-theme-classic-lib-next-theme-DocSidebar- {
  **/
 
 .pagination-nav__item--next .pagination-nav__link {
-  background: var(--palette-pink);
+  background: var(--palette-green);
 }
 
 .pagination-nav__link {
-  background: var(--palette-pink);
+  background: var(--palette-green);
 }
 
 /**

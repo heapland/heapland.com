@@ -73,6 +73,9 @@
   color: var(--palette-black);
   font-size: var(--font-size-normal);
 }
+.footer__link:hover {
+  color: var(--palette-green);
+}
 
 .footer__bottom {
   display: flex;

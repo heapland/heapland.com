@@ -1,6 +1,6 @@
 .help {
-  --ifm-link-color: var(--palette-pink);
-  --ifm-link-hover-color: var(--palette-pink);
+  --ifm-link-color: var(--palette-green);
+  --ifm-link-hover-color: var(--palette-green);
   display: flex;
   width: 100%;
   max-width: var(--ifm-container-width);
@@ -37,7 +37,7 @@
 .help__bullet::before {
   content: ">";
   margin-right: 1rem;
-  color: var(--palette-pink);
+  color: var(--palette-green);
 }
 
 @media (max-width: 996px) {

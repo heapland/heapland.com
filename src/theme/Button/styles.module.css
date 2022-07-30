@@ -25,13 +25,13 @@
 }
 
 .button--primary {
-  background-color: var(--palette-pink);
+  background-color: var(--palette-green);
   color: var(--palette-white);
 }
 
 .button--primary:hover {
   color: var(--palette-white);
-  background-color: var(--palette-pink-darker);
+  background-color: var(--palette-green);
 }
 
 .button--icon img {

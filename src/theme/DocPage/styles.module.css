@@ -124,14 +124,23 @@
 .doc__sidebar :global(.menu) {
   padding: 0.5rem 1rem;
 }
+.doc__sidebar :global(.menu > .menu__list > .menu__list-item > .menu__link) {
+  color: #f0f6ff;
+  font-size: 16px;
+}
 .doc__sidebar
   :global(.menu > .menu__list > .menu__list-item > .menu__link):hover {
-  background-color: #f0f6ff;
+  color: #52b788;
+}
+.doc__sidebar
+  :global(.menu > .menu__list > .menu__list-item > .menu__link):hover::after {
+  background: url("data:image/svg+xml;utf8,<svg alt='Arrow' xmlns='http://www.w3.org/2000/svg' width='16px' height='16px' viewBox='0 0 24 24'><path fill='rgba(82,183,136)' d='M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z'></path></svg>")
+    50% / 1.6rem 1.6rem;
 }
 .doc__sidebar
   :global(.menu > .menu__list > .menu__list-item > .menu__link)::after {
   left: 4px !important;
-  background: url("data:image/svg+xml;utf8,<svg alt='Arrow' xmlns='http://www.w3.org/2000/svg' width='16px' height='16px' viewBox='0 0 24 24'><path fill='rgba(0,0,0)' d='M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z'></path></svg>")
+  background: url("data:image/svg+xml;utf8,<svg alt='Arrow' xmlns='http://www.w3.org/2000/svg' width='16px' height='16px' viewBox='0 0 24 24'><path fill='rgba(255,255,255)' d='M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z'></path></svg>")
     50% / 1.6rem 1.6rem;
 }
 :global(.menu__link) {
@@ -139,14 +148,16 @@
   font-weight: var(--ifm-font-weight-semibold);
 }
 :global(.menu__link:not(.menu__link--sublist)):hover {
-  background-color: #f0f6ff;
+  background-color: #52b788;
 }
 :global(.menu__link--active:not(.menu__link--sublist)) {
-  background-color: #f0f6ff;
+  background-color: #52b788;
+  color: #f0f6ff;
   font-size: 13px;
 }
 :global(.menu__link:not(.menu__link--sublist)) {
   font-size: 13px;
+  color: #f0f6ff;
 }
 
 .doc__item-wrapper :global(.row .col > div) {
@@ -162,6 +173,12 @@
 :global(.table-of-contents li) {
   position: relative;
 }
+:global(.hash-link) {
+  color: var(--palette-green);
+}
+:global(.hash-link:hover) {
+  color: var(--palette-green);
+}
 
 :global(.table-of-contents__link--active::before) {
   position: absolute;
@@ -170,7 +187,13 @@
   left: -18px;
   width: 3px;
   content: " ";
-  background: var(--palette-pink);
+  background: var(--palette-green);
+}
+:global(.table-of-contents__link--active) {
+  color: var(--palette-green);
+}
+:global(.table-of-contents__link:hover) {
+  color: var(--palette-green);
 }
 
 ul ul :global(.table-of-contents__link--active::before) {
