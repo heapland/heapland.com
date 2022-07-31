@@ -31,3 +31,11 @@
   border-top-left-radius: var(--ifm-global-border-radius);
   border-top-right-radius: var(--ifm-global-border-radius);
 }
+
+:global(.article_src-theme-TutorialPostItem-) {
+  background: linear-gradient(
+    180deg,
+    rgba(43, 56, 84, 0.5) 0%,
+    rgba(33, 42, 64, 0.45) 100%
+  );
+}

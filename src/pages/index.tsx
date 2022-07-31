@@ -1,6 +1,5 @@
 import clsx from "clsx"
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext"
-import React from "react"
 // import TextLoop from "react-text-loop"
 // import ReactTypingEffect from "react-typing-effect"
 
@@ -17,10 +16,294 @@ import seCss from "../css/section.module.css"
 import featTiles from "../css/index/featureTiles.module.css"
 import priCss from "../css/index/pricing.module.css"
 import { Link } from "react-router-dom"
+import React from "react"
 
 type IFeatureCard = {
   title: any
   icon: any
+}
+
+const DBLogos = (selectedStorage) => {
+  let renderView: any
+  switch (selectedStorage) {
+    case "dbms":
+      renderView = (
+        <div className={ftuCss.db__logo_containers}>
+          <Link to={"/"}>
+            <figure
+              data-for="figure-tooltip-Amazon Athena"
+              data-tip="Amazon Athena"
+              title="Amazon Athena"
+              className={ftuCss.supportdb__db_logo}
+            >
+              <img
+                src="https://popsql.com/static/landing/first-section/athena.svg"
+                alt="Amazon Athena"
+                loading="lazy"
+              />
+            </figure>
+            <span>PostgreSQL</span>
+          </Link>
+          <Link to={"/"}>
+            <figure
+              data-for="figure-tooltip-Amazon Athena"
+              data-tip="Amazon Athena"
+              title="Amazon Athena"
+              className={ftuCss.supportdb__db_logo}
+            >
+              <img
+                src="https://popsql.com/static/landing/first-section/azure-synapse.svg"
+                alt="Amazon Athena"
+                loading="lazy"
+              />
+            </figure>
+            <span>MariaDB</span>
+          </Link>
+          <Link to={"/"}>
+            <figure
+              data-for="figure-tooltip-Amazon Athena"
+              data-tip="Amazon Athena"
+              title="Amazon Athena"
+              className={ftuCss.supportdb__db_logo}
+            >
+              <img
+                src="https://popsql.com/static/landing/first-section/athena.svg"
+                alt="Amazon Athena"
+                loading="lazy"
+              />
+            </figure>
+            <span>MySQL</span>
+          </Link>
+          <Link to={"/"}>
+            <figure
+              data-for="figure-tooltip-Amazon Athena"
+              data-tip="Amazon Athena"
+              title="Amazon Athena"
+              className={ftuCss.supportdb__db_logo}
+            >
+              <img
+                src="https://popsql.com/static/landing/first-section/azure-synapse.svg"
+                alt="Amazon Athena"
+                loading="lazy"
+              />
+            </figure>
+            <span>Cassandra</span>
+          </Link>
+          <Link to={"/"}>
+            <figure
+              data-for="figure-tooltip-Amazon Athena"
+              data-tip="Amazon Athena"
+              title="Amazon Athena"
+              className={ftuCss.supportdb__db_logo}
+            >
+              <img
+                src="https://popsql.com/static/landing/first-section/athena.svg"
+                alt="Amazon Athena"
+                loading="lazy"
+              />
+            </figure>
+            <span>Amazon S3</span>
+          </Link>
+          <Link to={"/"}>
+            <figure
+              data-for="figure-tooltip-Amazon Athena"
+              data-tip="Amazon Athena"
+              title="Amazon Athena"
+              className={ftuCss.supportdb__db_logo}
+            >
+              <img
+                src="https://popsql.com/static/landing/first-section/azure-synapse.svg"
+                alt="Amazon Athena"
+                loading="lazy"
+              />
+            </figure>
+            <span>Kafka</span>
+          </Link>
+          <Link to={"/"}>
+            <figure
+              data-for="figure-tooltip-Amazon Athena"
+              data-tip="Amazon Athena"
+              title="Amazon Athena"
+              className={ftuCss.supportdb__db_logo}
+            >
+              <img
+                src="https://popsql.com/static/landing/first-section/athena.svg"
+                alt="Amazon Athena"
+                loading="lazy"
+              />
+            </figure>
+            <span>MongoDB</span>
+          </Link>
+          <Link to={"/"}>
+            <figure
+              data-for="figure-tooltip-Amazon Athena"
+              data-tip="Amazon Athena"
+              title="Amazon Athena"
+              className={ftuCss.supportdb__db_logo}
+            >
+              <img
+                src="https://popsql.com/static/landing/first-section/azure-synapse.svg"
+                alt="Amazon Athena"
+                loading="lazy"
+              />
+            </figure>
+            <span>MongoDB</span>
+          </Link>
+          <Link to={"/"}>
+            <figure
+              data-for="figure-tooltip-Amazon Athena"
+              data-tip="Amazon Athena"
+              title="Amazon Athena"
+              className={ftuCss.supportdb__db_logo}
+            >
+              <img
+                src="https://popsql.com/static/landing/first-section/athena.svg"
+                alt="Amazon Athena"
+                loading="lazy"
+              />
+            </figure>
+            <span>MongoDB</span>
+          </Link>
+          <Link to={"/"}>
+            <figure
+              data-for="figure-tooltip-Amazon Athena"
+              data-tip="Amazon Athena"
+              title="Amazon Athena"
+              className={ftuCss.supportdb__db_logo}
+            >
+              <img
+                src="https://popsql.com/static/landing/first-section/azure-synapse.svg"
+                alt="Amazon Athena"
+                loading="lazy"
+              />
+            </figure>
+            <span>MongoDB</span>
+          </Link>
+        </div>
+      )
+      break
+    case "fs":
+      renderView = (
+        <div className={ftuCss.db__logo_containers}>
+          <Link to={"/"}>
+            <figure
+              data-for="figure-tooltip-Amazon Athena"
+              data-tip="Amazon Athena"
+              title="Amazon Athena"
+              className={ftuCss.supportdb__db_logo}
+            >
+              <img
+                src="https://popsql.com/static/landing/first-section/athena.svg"
+                alt="Amazon Athena"
+                loading="lazy"
+              />
+            </figure>
+            <span>PostgreSQL</span>
+          </Link>
+          <Link to={"/"}>
+            <figure
+              data-for="figure-tooltip-Amazon Athena"
+              data-tip="Amazon Athena"
+              title="Amazon Athena"
+              className={ftuCss.supportdb__db_logo}
+            >
+              <img
+                src="https://popsql.com/static/landing/first-section/azure-synapse.svg"
+                alt="Amazon Athena"
+                loading="lazy"
+              />
+            </figure>
+            <span>MariaDB</span>
+          </Link>
+          <Link to={"/"}>
+            <figure
+              data-for="figure-tooltip-Amazon Athena"
+              data-tip="Amazon Athena"
+              title="Amazon Athena"
+              className={ftuCss.supportdb__db_logo}
+            >
+              <img
+                src="https://popsql.com/static/landing/first-section/athena.svg"
+                alt="Amazon Athena"
+                loading="lazy"
+              />
+            </figure>
+            <span>MySQL</span>
+          </Link>
+          <Link to={"/"}>
+            <figure
+              data-for="figure-tooltip-Amazon Athena"
+              data-tip="Amazon Athena"
+              title="Amazon Athena"
+              className={ftuCss.supportdb__db_logo}
+            >
+              <img
+                src="https://popsql.com/static/landing/first-section/azure-synapse.svg"
+                alt="Amazon Athena"
+                loading="lazy"
+              />
+            </figure>
+            <span>Cassandra</span>
+          </Link>
+          <Link to={"/"}>
+            <figure
+              data-for="figure-tooltip-Amazon Athena"
+              data-tip="Amazon Athena"
+              title="Amazon Athena"
+              className={ftuCss.supportdb__db_logo}
+            >
+              <img
+                src="https://popsql.com/static/landing/first-section/athena.svg"
+                alt="Amazon Athena"
+                loading="lazy"
+              />
+            </figure>
+            <span>Amazon S3</span>
+          </Link>
+        </div>
+      )
+      break
+    case "streams":
+      renderView = (
+        <div className={ftuCss.db__logo_containers}>
+          <Link to={"/"}>
+            <figure
+              data-for="figure-tooltip-Amazon Athena"
+              data-tip="Amazon Athena"
+              title="Amazon Athena"
+              className={ftuCss.supportdb__db_logo}
+            >
+              <img
+                src="https://popsql.com/static/landing/first-section/athena.svg"
+                alt="Amazon Athena"
+                loading="lazy"
+              />
+            </figure>
+            <span>PostgreSQL</span>
+          </Link>
+          <Link to={"/"}>
+            <figure
+              data-for="figure-tooltip-Amazon Athena"
+              data-tip="Amazon Athena"
+              title="Amazon Athena"
+              className={ftuCss.supportdb__db_logo}
+            >
+              <img
+                src="https://popsql.com/static/landing/first-section/azure-synapse.svg"
+                alt="Amazon Athena"
+                loading="lazy"
+              />
+            </figure>
+            <span>MariaDB</span>
+          </Link>
+        </div>
+      )
+      break
+    default:
+      renderView = <div></div>
+  }
+
+  return renderView
 }
 
 const FeatureCard = ({ title, icon }: IFeatureCard) => {
@@ -48,7 +331,8 @@ const Top = () => {
             <span className="text__bg__gradient"> your storage services</span>
           </div>
           <div className={juCss.jumbotron__description}>
-            Browse file systems, query databases and stream messages from message brokers all at one place.
+            Browse file systems, query databases and stream messages from
+            message brokers all at one place.
           </div>
 
           <div className={clsx(juCss.jub__action__btns)}>
@@ -74,14 +358,10 @@ const Top = () => {
             </a>
 
             <br />
-           
           </div>
         </div>
         <div className={juCss.jub__right__content}>
-          <img
-            src="/static/img/pages/landing/browsers-screenshot.png"
-            alt=""
-          />
+          <img src="/static/img/pages/landing/browsers-screenshot.png" alt="" />
         </div>
       </div>
     </section>
@@ -104,8 +384,8 @@ const FeaturesCards = () => {
         <FeatureCard
           title={
             <>
-              <span className="text__bg__gradient">Accelerate</span> development,
-              debugging and analysis of application data and logs.
+              <span className="text__bg__gradient">Accelerate</span>{" "}
+              development, debugging and analysis of application data and logs.
             </>
           }
           icon={"https://coder.com/_next/static/media/accelerate.90af2ebe.svg"}
@@ -114,7 +394,8 @@ const FeaturesCards = () => {
           title={
             <>
               <span className="text__bg__gradient">Connect </span>
-              with storage services running on public cloud or OnPremise infrastructure.
+              with storage services running on public cloud or OnPremise
+              infrastructure.
             </>
           }
           icon={"https://coder.com/_next/static/media/commit.e878e129.svg"}
@@ -134,12 +415,10 @@ const FeaturesCards = () => {
 }
 
 const SupportDB = () => {
-
   const [storage, setStorageCategory] = React.useState<{
     storageCategory: string
   }>({
     storageCategory: "dbms",
-   
   })
 
   const onClickStorageTab = (storageCat: string) => {
@@ -147,19 +426,18 @@ const SupportDB = () => {
       case "dbms":
         setStorageCategory({
           storageCategory: storageCat,
-        });
+        })
         break
       case "fs":
         setStorageCategory({
           storageCategory: storageCat,
-        });
+        })
         break
-      case "Mac":
+      case "streams":
         setStorageCategory({
           storageCategory: storageCat,
-        });
+        })
         break
-  
     }
   }
 
@@ -173,8 +451,6 @@ const SupportDB = () => {
   return (
     <section className={clsx("container", ftuCss.supportdb__container)}>
       <div className={ftuCss.supportdb__left__content}>
-        
-        
         <div
           className={clsx(ftuCss.supportdb__scnd__title, "text__bg__gradient")}
         >
@@ -182,7 +458,7 @@ const SupportDB = () => {
         </div>
         <div className={clsx("row", juCss.gigahex_installer_container)}>
           <div className={clsx("col col--12")} style={{ padding: 0 }}>
-        <ul className={clsx("tabs tabs--block", juCss.os_tabs_container)}>
+            <ul className={clsx("tabs tabs--block", juCss.os_tabs_container)}>
               <li
                 className={clsx(
                   "tabs__item",
@@ -207,81 +483,17 @@ const SupportDB = () => {
                 className={clsx(
                   "tabs__item",
                   juCss.os_tab,
-                  getActiveTab("Ubuntu", storage.storageCategory),
+                  getActiveTab("streams", storage.storageCategory),
                 )}
                 onClick={() => onClickStorageTab("streams")}
               >
                 Streams
               </li>
             </ul>
-            </div>
-            </div>
-
-        <div className={ftuCss.db__logo_containers}>
-        <Link to={"/"}>
-        <figure data-for="figure-tooltip-Amazon Athena" data-tip="Amazon Athena" title="Amazon Athena" className={ftuCss.supportdb__db_logo} >
-          <img src="https://popsql.com/static/landing/first-section/athena.svg" alt="Amazon Athena" loading="lazy"/>
-          </figure>
-          <span>PostgreSQL</span>
-        </Link>
-        <Link to={"/"}>
-        <figure data-for="figure-tooltip-Amazon Athena" data-tip="Amazon Athena" title="Amazon Athena" className={ftuCss.supportdb__db_logo} >
-          <img src="https://popsql.com/static/landing/first-section/azure-synapse.svg" alt="Amazon Athena" loading="lazy"/>
-          </figure>
-          <span>MariaDB</span>
-        </Link>
-        <Link to={"/"}>
-        <figure data-for="figure-tooltip-Amazon Athena" data-tip="Amazon Athena" title="Amazon Athena" className={ftuCss.supportdb__db_logo} >
-          <img src="https://popsql.com/static/landing/first-section/athena.svg" alt="Amazon Athena" loading="lazy"/>
-          </figure>
-          <span>MySQL</span>
-        </Link>
-        <Link to={"/"}>
-        <figure data-for="figure-tooltip-Amazon Athena" data-tip="Amazon Athena" title="Amazon Athena" className={ftuCss.supportdb__db_logo} >
-          <img src="https://popsql.com/static/landing/first-section/azure-synapse.svg" alt="Amazon Athena" loading="lazy"/>
-          </figure>
-          <span>Cassandra</span>
-        </Link>
-        <Link to={"/"}>
-        <figure data-for="figure-tooltip-Amazon Athena" data-tip="Amazon Athena" title="Amazon Athena" className={ftuCss.supportdb__db_logo} >
-          <img src="https://popsql.com/static/landing/first-section/athena.svg" alt="Amazon Athena" loading="lazy"/>
-          </figure>
-          <span>Amazon S3</span>
-        </Link>
-        <Link to={"/"}>
-        <figure data-for="figure-tooltip-Amazon Athena" data-tip="Amazon Athena" title="Amazon Athena" className={ftuCss.supportdb__db_logo} >
-          <img src="https://popsql.com/static/landing/first-section/azure-synapse.svg" alt="Amazon Athena" loading="lazy"/>
-          </figure>
-          <span>Kafka</span>
-        </Link>
-        <Link to={"/"}>
-        <figure data-for="figure-tooltip-Amazon Athena" data-tip="Amazon Athena" title="Amazon Athena" className={ftuCss.supportdb__db_logo} >
-          <img src="https://popsql.com/static/landing/first-section/athena.svg" alt="Amazon Athena" loading="lazy"/>
-          </figure>
-          <span>MongoDB</span>
-        </Link>
-        <Link to={"/"}>
-        <figure data-for="figure-tooltip-Amazon Athena" data-tip="Amazon Athena" title="Amazon Athena" className={ftuCss.supportdb__db_logo} >
-          <img src="https://popsql.com/static/landing/first-section/azure-synapse.svg" alt="Amazon Athena" loading="lazy"/>
-          </figure>
-          <span>MongoDB</span>
-        </Link>
-        <Link to={"/"}>
-        <figure data-for="figure-tooltip-Amazon Athena" data-tip="Amazon Athena" title="Amazon Athena" className={ftuCss.supportdb__db_logo} >
-          <img src="https://popsql.com/static/landing/first-section/athena.svg" alt="Amazon Athena" loading="lazy"/>
-          </figure>
-          <span>MongoDB</span>
-        </Link>
-        <Link to={"/"}>
-        <figure data-for="figure-tooltip-Amazon Athena" data-tip="Amazon Athena" title="Amazon Athena" className={ftuCss.supportdb__db_logo} >
-          <img src="https://popsql.com/static/landing/first-section/azure-synapse.svg" alt="Amazon Athena" loading="lazy"/>
-          </figure>
-          <span>MongoDB</span>
-        </Link>
+            {DBLogos(storage.storageCategory)}
+          </div>
         </div>
       </div>
-
-      
     </section>
   )
 }
@@ -753,7 +965,7 @@ const Home = () => {
       title={title}
     >
       <Top />
-      
+
       <FeaturesCards />
       <SupportDB />
       <FeaturesTiles />

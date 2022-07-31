@@ -62,7 +62,11 @@
 }
 
 .section--odd {
-  background: var(--palette-dark-blue);
+  background: linear-gradient(
+    180deg,
+    rgba(43, 56, 84, 0.5) 0%,
+    rgba(33, 42, 64, 0.45) 100%
+  );
 }
 .section--odd p {
   color: var(--palette-pale-blue);
@@ -308,4 +312,15 @@
   .section__title--jumbotron {
     font-size: var(--font-size-big-3);
   }
+}
+
+:global(.tabs__item--active) {
+  color: var(--palette-green);
+  border-bottom-color: var(--palette-green);
+}
+:global(.tabs--block) {
+  margin-bottom: 40px;
+}
+:global(.tabs__item:hover) {
+  color: var(--palette-green);
 }
