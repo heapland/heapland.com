@@ -214,12 +214,16 @@
   }
 }
 @media (max-width: 426px) {
+  .db__logo_containers {
+    gap: 0 10px;
+  }
   .supportdb__db_logo {
     width: 3.5rem;
     height: 3.5rem;
+    margin: 10px;
   }
   .db__logo_containers > a > span {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   .supportdb_tab_tab > li {
     font-size: 1rem;
@@ -234,6 +238,4 @@
   .image__container {
     margin-top: 2rem;
   }
-}
-@media (max-width: 376px) {
 }

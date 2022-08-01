@@ -14,7 +14,8 @@ import juCss from "../css/index/jumbotron.module.css"
 import ftuCss from "../css/index/ftuCard.module.css"
 import seCss from "../css/section.module.css"
 import featTiles from "../css/index/featureTiles.module.css"
-import priCss from "../css/index/pricing.module.css"
+import wthCss from "../css/index/watch.module.css"
+// import priCss from "../css/index/pricing.module.css"
 import { Link } from "react-router-dom"
 import React from "react"
 
@@ -353,7 +354,7 @@ const Top = () => {
                 ></path>
               </svg>
             </a>
-            <a href="#" className={juCss.request__demo__btn}>
+            <a href="#watch_demo" className={juCss.request__demo__btn}>
               Watch Demo
             </a>
 
@@ -590,235 +591,235 @@ const FeaturesTiles = () => {
   )
 }
 
-const Pricing = () => {
-  return (
-    <section className={clsx("container", priCss.pricing__container)}>
-      <div className={priCss.free__version}>
-        <div className={priCss.pricing__label}>Pricing</div>
-        <div className={priCss.desc}>
-          Our entire developer experience is free and open source. Reach out
-          when you have a mature deployment or enterprise needs.
-        </div>
-      </div>
+// const Pricing = () => {
+//   return (
+//     <section className={clsx("container", priCss.pricing__container)}>
+//       <div className={priCss.free__version}>
+//         <div className={priCss.pricing__label}>Pricing</div>
+//         <div className={priCss.desc}>
+//           Our entire developer experience is free and open source. Reach out
+//           when you have a mature deployment or enterprise needs.
+//         </div>
+//       </div>
 
-      <div>
-        <div className={priCss.community__version}>
-          <div className={priCss.body__content}>
-            <div className={priCss.community__label}>Community</div>
-            <ul className={priCss.price__features}>
-              <li>
-                <svg
-                  className="MuiSvgIcon-root jss535"
-                  focusable="false"
-                  viewBox="0 0 20 20"
-                  aria-hidden="true"
-                  width="20"
-                  height="20"
-                >
-                  <path
-                    d="M10 0C4.486 0 0 4.486 0 10C0 15.514 4.486 20 10 20C15.514 20 20 15.514 20 10C20 4.486 15.514 0 10 0ZM8.001 14.413L4.288 10.708L5.7 9.292L7.999 11.587L13.293 6.293L14.707 7.707L8.001 14.413Z"
-                    fill="#2DA557"
-                  ></path>
-                </svg>
-                <strong>Open Source</strong>
-              </li>
-              <li>
-                <svg
-                  className="MuiSvgIcon-root jss535"
-                  focusable="false"
-                  viewBox="0 0 20 20"
-                  aria-hidden="true"
-                  width="20"
-                  height="20"
-                >
-                  <path
-                    d="M10 0C4.486 0 0 4.486 0 10C0 15.514 4.486 20 10 20C15.514 20 20 15.514 20 10C20 4.486 15.514 0 10 0ZM8.001 14.413L4.288 10.708L5.7 9.292L7.999 11.587L13.293 6.293L14.707 7.707L8.001 14.413Z"
-                    fill="#2DA557"
-                  ></path>
-                </svg>
-                <strong>Always Free</strong>
-              </li>
-              <li>
-                <svg
-                  className="MuiSvgIcon-root jss535"
-                  focusable="false"
-                  viewBox="0 0 20 20"
-                  aria-hidden="true"
-                  width="20"
-                  height="20"
-                >
-                  <path
-                    d="M10 0C4.486 0 0 4.486 0 10C0 15.514 4.486 20 10 20C15.514 20 20 15.514 20 10C20 4.486 15.514 0 10 0ZM8.001 14.413L4.288 10.708L5.7 9.292L7.999 11.587L13.293 6.293L14.707 7.707L8.001 14.413Z"
-                    fill="#2DA557"
-                  ></path>
-                </svg>
-                <strong>Unlimited Users</strong>
-              </li>
-              <li>
-                <svg
-                  className="MuiSvgIcon-root jss535"
-                  focusable="false"
-                  viewBox="0 0 20 20"
-                  aria-hidden="true"
-                  width="20"
-                  height="20"
-                >
-                  <path
-                    d="M10 0C4.486 0 0 4.486 0 10C0 15.514 4.486 20 10 20C15.514 20 20 15.514 20 10C20 4.486 15.514 0 10 0ZM8.001 14.413L4.288 10.708L5.7 9.292L7.999 11.587L13.293 6.293L14.707 7.707L8.001 14.413Z"
-                    fill="#2DA557"
-                  ></path>
-                </svg>
-                <strong>Unlimited Workspaces</strong>
-              </li>
-              <li>
-                <svg
-                  className="MuiSvgIcon-root jss535"
-                  focusable="false"
-                  viewBox="0 0 20 20"
-                  aria-hidden="true"
-                  width="20"
-                  height="20"
-                >
-                  <path
-                    d="M10 0C4.486 0 0 4.486 0 10C0 15.514 4.486 20 10 20C15.514 20 20 15.514 20 10C20 4.486 15.514 0 10 0ZM8.001 14.413L4.288 10.708L5.7 9.292L7.999 11.587L13.293 6.293L14.707 7.707L8.001 14.413Z"
-                    fill="#2DA557"
-                  ></path>
-                </svg>
-                <strong>OpenID Connect</strong>
-              </li>
-              <li>
-                <svg
-                  className="MuiSvgIcon-root jss535"
-                  focusable="false"
-                  viewBox="0 0 20 20"
-                  aria-hidden="true"
-                  width="20"
-                  height="20"
-                >
-                  <path
-                    d="M10 0C4.486 0 0 4.486 0 10C0 15.514 4.486 20 10 20C15.514 20 20 15.514 20 10C20 4.486 15.514 0 10 0ZM8.001 14.413L4.288 10.708L5.7 9.292L7.999 11.587L13.293 6.293L14.707 7.707L8.001 14.413Z"
-                    fill="#2DA557"
-                  ></path>
-                </svg>
-                <strong>Sign in with GitHub</strong>
-              </li>
-            </ul>
-          </div>
+//       <div>
+//         <div className={priCss.community__version}>
+//           <div className={priCss.body__content}>
+//             <div className={priCss.community__label}>Community</div>
+//             <ul className={priCss.price__features}>
+//               <li>
+//                 <svg
+//                   className="MuiSvgIcon-root jss535"
+//                   focusable="false"
+//                   viewBox="0 0 20 20"
+//                   aria-hidden="true"
+//                   width="20"
+//                   height="20"
+//                 >
+//                   <path
+//                     d="M10 0C4.486 0 0 4.486 0 10C0 15.514 4.486 20 10 20C15.514 20 20 15.514 20 10C20 4.486 15.514 0 10 0ZM8.001 14.413L4.288 10.708L5.7 9.292L7.999 11.587L13.293 6.293L14.707 7.707L8.001 14.413Z"
+//                     fill="#2DA557"
+//                   ></path>
+//                 </svg>
+//                 <strong>Open Source</strong>
+//               </li>
+//               <li>
+//                 <svg
+//                   className="MuiSvgIcon-root jss535"
+//                   focusable="false"
+//                   viewBox="0 0 20 20"
+//                   aria-hidden="true"
+//                   width="20"
+//                   height="20"
+//                 >
+//                   <path
+//                     d="M10 0C4.486 0 0 4.486 0 10C0 15.514 4.486 20 10 20C15.514 20 20 15.514 20 10C20 4.486 15.514 0 10 0ZM8.001 14.413L4.288 10.708L5.7 9.292L7.999 11.587L13.293 6.293L14.707 7.707L8.001 14.413Z"
+//                     fill="#2DA557"
+//                   ></path>
+//                 </svg>
+//                 <strong>Always Free</strong>
+//               </li>
+//               <li>
+//                 <svg
+//                   className="MuiSvgIcon-root jss535"
+//                   focusable="false"
+//                   viewBox="0 0 20 20"
+//                   aria-hidden="true"
+//                   width="20"
+//                   height="20"
+//                 >
+//                   <path
+//                     d="M10 0C4.486 0 0 4.486 0 10C0 15.514 4.486 20 10 20C15.514 20 20 15.514 20 10C20 4.486 15.514 0 10 0ZM8.001 14.413L4.288 10.708L5.7 9.292L7.999 11.587L13.293 6.293L14.707 7.707L8.001 14.413Z"
+//                     fill="#2DA557"
+//                   ></path>
+//                 </svg>
+//                 <strong>Unlimited Users</strong>
+//               </li>
+//               <li>
+//                 <svg
+//                   className="MuiSvgIcon-root jss535"
+//                   focusable="false"
+//                   viewBox="0 0 20 20"
+//                   aria-hidden="true"
+//                   width="20"
+//                   height="20"
+//                 >
+//                   <path
+//                     d="M10 0C4.486 0 0 4.486 0 10C0 15.514 4.486 20 10 20C15.514 20 20 15.514 20 10C20 4.486 15.514 0 10 0ZM8.001 14.413L4.288 10.708L5.7 9.292L7.999 11.587L13.293 6.293L14.707 7.707L8.001 14.413Z"
+//                     fill="#2DA557"
+//                   ></path>
+//                 </svg>
+//                 <strong>Unlimited Workspaces</strong>
+//               </li>
+//               <li>
+//                 <svg
+//                   className="MuiSvgIcon-root jss535"
+//                   focusable="false"
+//                   viewBox="0 0 20 20"
+//                   aria-hidden="true"
+//                   width="20"
+//                   height="20"
+//                 >
+//                   <path
+//                     d="M10 0C4.486 0 0 4.486 0 10C0 15.514 4.486 20 10 20C15.514 20 20 15.514 20 10C20 4.486 15.514 0 10 0ZM8.001 14.413L4.288 10.708L5.7 9.292L7.999 11.587L13.293 6.293L14.707 7.707L8.001 14.413Z"
+//                     fill="#2DA557"
+//                   ></path>
+//                 </svg>
+//                 <strong>OpenID Connect</strong>
+//               </li>
+//               <li>
+//                 <svg
+//                   className="MuiSvgIcon-root jss535"
+//                   focusable="false"
+//                   viewBox="0 0 20 20"
+//                   aria-hidden="true"
+//                   width="20"
+//                   height="20"
+//                 >
+//                   <path
+//                     d="M10 0C4.486 0 0 4.486 0 10C0 15.514 4.486 20 10 20C15.514 20 20 15.514 20 10C20 4.486 15.514 0 10 0ZM8.001 14.413L4.288 10.708L5.7 9.292L7.999 11.587L13.293 6.293L14.707 7.707L8.001 14.413Z"
+//                     fill="#2DA557"
+//                   ></path>
+//                 </svg>
+//                 <strong>Sign in with GitHub</strong>
+//               </li>
+//             </ul>
+//           </div>
 
-          <a href="#" className={priCss.view__repo__btn__bottom}>
-            View the Repo
-          </a>
-        </div>
-        <div className={priCss.enterprise__version}>
-          <div className={priCss.body__content}>
-            <div className={priCss.enterprise__label}>Enterprise</div>
-            <ul className={priCss.price__features}>
-              <li>
-                <svg
-                  className="MuiSvgIcon-root jss535"
-                  focusable="false"
-                  viewBox="0 0 20 20"
-                  aria-hidden="true"
-                  width="20"
-                  height="20"
-                >
-                  <path
-                    d="M10 0C4.486 0 0 4.486 0 10C0 15.514 4.486 20 10 20C15.514 20 20 15.514 20 10C20 4.486 15.514 0 10 0ZM8.001 14.413L4.288 10.708L5.7 9.292L7.999 11.587L13.293 6.293L14.707 7.707L8.001 14.413Z"
-                    fill="#2DA557"
-                  ></path>
-                </svg>
-                <strong>24/7 Enterprise Support</strong>
-              </li>
-              <li>
-                <svg
-                  className="MuiSvgIcon-root jss535"
-                  focusable="false"
-                  viewBox="0 0 20 20"
-                  aria-hidden="true"
-                  width="20"
-                  height="20"
-                >
-                  <path
-                    d="M10 0C4.486 0 0 4.486 0 10C0 15.514 4.486 20 10 20C15.514 20 20 15.514 20 10C20 4.486 15.514 0 10 0ZM8.001 14.413L4.288 10.708L5.7 9.292L7.999 11.587L13.293 6.293L14.707 7.707L8.001 14.413Z"
-                    fill="#2DA557"
-                  ></path>
-                </svg>
-                <strong>High Availability</strong>
-              </li>
-              <li>
-                <svg
-                  className="MuiSvgIcon-root jss535"
-                  focusable="false"
-                  viewBox="0 0 20 20"
-                  aria-hidden="true"
-                  width="20"
-                  height="20"
-                >
-                  <path
-                    d="M10 0C4.486 0 0 4.486 0 10C0 15.514 4.486 20 10 20C15.514 20 20 15.514 20 10C20 4.486 15.514 0 10 0ZM8.001 14.413L4.288 10.708L5.7 9.292L7.999 11.587L13.293 6.293L14.707 7.707L8.001 14.413Z"
-                    fill="#2DA557"
-                  ></path>
-                </svg>
-                <strong>Quotas</strong>
-              </li>
-              <li>
-                <svg
-                  className="MuiSvgIcon-root jss535"
-                  focusable="false"
-                  viewBox="0 0 20 20"
-                  aria-hidden="true"
-                  width="20"
-                  height="20"
-                >
-                  <path
-                    d="M10 0C4.486 0 0 4.486 0 10C0 15.514 4.486 20 10 20C15.514 20 20 15.514 20 10C20 4.486 15.514 0 10 0ZM8.001 14.413L4.288 10.708L5.7 9.292L7.999 11.587L13.293 6.293L14.707 7.707L8.001 14.413Z"
-                    fill="#2DA557"
-                  ></path>
-                </svg>
-                <strong>Auditing</strong>
-              </li>
-              <li>
-                <svg
-                  className="MuiSvgIcon-root jss535"
-                  focusable="false"
-                  viewBox="0 0 20 20"
-                  aria-hidden="true"
-                  width="20"
-                  height="20"
-                >
-                  <path
-                    d="M10 0C4.486 0 0 4.486 0 10C0 15.514 4.486 20 10 20C15.514 20 20 15.514 20 10C20 4.486 15.514 0 10 0ZM8.001 14.413L4.288 10.708L5.7 9.292L7.999 11.587L13.293 6.293L14.707 7.707L8.001 14.413Z"
-                    fill="#2DA557"
-                  ></path>
-                </svg>
-                <strong>RBAC</strong>
-              </li>
-              <li>
-                <svg
-                  className="MuiSvgIcon-root jss535"
-                  focusable="false"
-                  viewBox="0 0 20 20"
-                  aria-hidden="true"
-                  width="20"
-                  height="20"
-                >
-                  <path
-                    d="M10 0C4.486 0 0 4.486 0 10C0 15.514 4.486 20 10 20C15.514 20 20 15.514 20 10C20 4.486 15.514 0 10 0ZM8.001 14.413L4.288 10.708L5.7 9.292L7.999 11.587L13.293 6.293L14.707 7.707L8.001 14.413Z"
-                    fill="#2DA557"
-                  ></path>
-                </svg>
-                <strong>Air Gapped Deployment</strong>
-              </li>
-            </ul>
-          </div>
-          <a href="#" className={priCss.request__btn}>
-            Watch Demo
-          </a>
-        </div>
-      </div>
-    </section>
-  )
-}
+//           <a href="#" className={priCss.view__repo__btn__bottom}>
+//             View the Repo
+//           </a>
+//         </div>
+//         <div className={priCss.enterprise__version}>
+//           <div className={priCss.body__content}>
+//             <div className={priCss.enterprise__label}>Enterprise</div>
+//             <ul className={priCss.price__features}>
+//               <li>
+//                 <svg
+//                   className="MuiSvgIcon-root jss535"
+//                   focusable="false"
+//                   viewBox="0 0 20 20"
+//                   aria-hidden="true"
+//                   width="20"
+//                   height="20"
+//                 >
+//                   <path
+//                     d="M10 0C4.486 0 0 4.486 0 10C0 15.514 4.486 20 10 20C15.514 20 20 15.514 20 10C20 4.486 15.514 0 10 0ZM8.001 14.413L4.288 10.708L5.7 9.292L7.999 11.587L13.293 6.293L14.707 7.707L8.001 14.413Z"
+//                     fill="#2DA557"
+//                   ></path>
+//                 </svg>
+//                 <strong>24/7 Enterprise Support</strong>
+//               </li>
+//               <li>
+//                 <svg
+//                   className="MuiSvgIcon-root jss535"
+//                   focusable="false"
+//                   viewBox="0 0 20 20"
+//                   aria-hidden="true"
+//                   width="20"
+//                   height="20"
+//                 >
+//                   <path
+//                     d="M10 0C4.486 0 0 4.486 0 10C0 15.514 4.486 20 10 20C15.514 20 20 15.514 20 10C20 4.486 15.514 0 10 0ZM8.001 14.413L4.288 10.708L5.7 9.292L7.999 11.587L13.293 6.293L14.707 7.707L8.001 14.413Z"
+//                     fill="#2DA557"
+//                   ></path>
+//                 </svg>
+//                 <strong>High Availability</strong>
+//               </li>
+//               <li>
+//                 <svg
+//                   className="MuiSvgIcon-root jss535"
+//                   focusable="false"
+//                   viewBox="0 0 20 20"
+//                   aria-hidden="true"
+//                   width="20"
+//                   height="20"
+//                 >
+//                   <path
+//                     d="M10 0C4.486 0 0 4.486 0 10C0 15.514 4.486 20 10 20C15.514 20 20 15.514 20 10C20 4.486 15.514 0 10 0ZM8.001 14.413L4.288 10.708L5.7 9.292L7.999 11.587L13.293 6.293L14.707 7.707L8.001 14.413Z"
+//                     fill="#2DA557"
+//                   ></path>
+//                 </svg>
+//                 <strong>Quotas</strong>
+//               </li>
+//               <li>
+//                 <svg
+//                   className="MuiSvgIcon-root jss535"
+//                   focusable="false"
+//                   viewBox="0 0 20 20"
+//                   aria-hidden="true"
+//                   width="20"
+//                   height="20"
+//                 >
+//                   <path
+//                     d="M10 0C4.486 0 0 4.486 0 10C0 15.514 4.486 20 10 20C15.514 20 20 15.514 20 10C20 4.486 15.514 0 10 0ZM8.001 14.413L4.288 10.708L5.7 9.292L7.999 11.587L13.293 6.293L14.707 7.707L8.001 14.413Z"
+//                     fill="#2DA557"
+//                   ></path>
+//                 </svg>
+//                 <strong>Auditing</strong>
+//               </li>
+//               <li>
+//                 <svg
+//                   className="MuiSvgIcon-root jss535"
+//                   focusable="false"
+//                   viewBox="0 0 20 20"
+//                   aria-hidden="true"
+//                   width="20"
+//                   height="20"
+//                 >
+//                   <path
+//                     d="M10 0C4.486 0 0 4.486 0 10C0 15.514 4.486 20 10 20C15.514 20 20 15.514 20 10C20 4.486 15.514 0 10 0ZM8.001 14.413L4.288 10.708L5.7 9.292L7.999 11.587L13.293 6.293L14.707 7.707L8.001 14.413Z"
+//                     fill="#2DA557"
+//                   ></path>
+//                 </svg>
+//                 <strong>RBAC</strong>
+//               </li>
+//               <li>
+//                 <svg
+//                   className="MuiSvgIcon-root jss535"
+//                   focusable="false"
+//                   viewBox="0 0 20 20"
+//                   aria-hidden="true"
+//                   width="20"
+//                   height="20"
+//                 >
+//                   <path
+//                     d="M10 0C4.486 0 0 4.486 0 10C0 15.514 4.486 20 10 20C15.514 20 20 15.514 20 10C20 4.486 15.514 0 10 0ZM8.001 14.413L4.288 10.708L5.7 9.292L7.999 11.587L13.293 6.293L14.707 7.707L8.001 14.413Z"
+//                     fill="#2DA557"
+//                   ></path>
+//                 </svg>
+//                 <strong>Air Gapped Deployment</strong>
+//               </li>
+//             </ul>
+//           </div>
+//           <a href="#" className={priCss.request__btn}>
+//             Watch Demo
+//           </a>
+//         </div>
+//       </div>
+//     </section>
+//   )
+// }
 
 const GetStartedSec = () => {
   const [copied, setCopied] = React.useState(false)
@@ -954,6 +955,45 @@ const GetStartedSec = () => {
   )
 }
 
+// even section
+const WatchInDemo = () => (
+  <section
+    id="watch_demo"
+    className={clsx(seCss.section, seCss["section--center"])}
+  >
+    <div className={clsx(wthCss.watch__sec)}>
+      <h2
+        className={clsx(
+          wthCss.watch__title,
+          seCss.section__title,
+          "text--center",
+        )}
+      >
+        Watch it in action
+      </h2>
+      <div className={clsx("container", wthCss.video__container)}>
+        <div
+          style={{
+            position: "relative",
+            paddingBottom: "59.715025906735754%",
+            height: 0,
+          }}
+        >
+          <video
+            controls
+            poster="/img/hero-banner.png"
+            src="video.mp4"
+            width="100%"
+            autoPlay
+          >
+            Your browser does not support the HTML5 Video element.
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
+)
+
 const Home = () => {
   const { siteConfig } = useDocusaurusContext()
   const title = "Heapland"
@@ -969,7 +1009,7 @@ const Home = () => {
       <FeaturesCards />
       <SupportDB />
       <FeaturesTiles />
-      <Pricing />
+      <WatchInDemo />
       <GetStartedSec />
     </PageLayout>
   )
