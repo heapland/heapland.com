@@ -173,8 +173,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 8rem;
-  margin-bottom: 5rem;
+  margin-top: 4rem;
+  margin-bottom: 3rem;
 }
 
 .get__started__label {
@@ -223,6 +223,12 @@
   }
 }
 @media (max-width: 424px) {
+  .get__started_sec {
+    margin-top: 2rem;
+  }
+  .cmd__copy__box {
+    font-size: 1rem;
+  }
   .section__footer--console {
     margin-top: 3rem;
     padding: 0 1rem 1rem 0;

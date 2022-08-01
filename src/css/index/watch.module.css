@@ -1,10 +1,14 @@
 .watch__sec {
-  padding: 4rem 0;
+  padding: 2rem 0;
   max-width: var(--ifm-container-width);
   width: 100%;
 }
 .video__container {
   padding-top: 2rem;
+}
+
+.watch__title {
+  color: var(--palette-green);
 }
 
 .ytb__video {
