@@ -32,7 +32,7 @@
   padding-top: 15px;
   white-space: nowrap;
   padding-left: 24px;
-  border-radius: 12px;
+  border-radius: 4px;
   padding-right: 24px;
   padding-bottom: 15px;
   justify-content: center;
@@ -65,6 +65,8 @@
 }
 .jub__right__content > img {
   max-height: 600px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
 }
 
 .jumbotron__description {
@@ -134,6 +136,9 @@
 }
 
 @media (max-width: 426px) {
+  .jumbotron__title {
+    font-size: 2.5rem;
+  }
   .jub__right__content {
     margin-top: 10px;
   }

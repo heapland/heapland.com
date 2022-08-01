@@ -348,7 +348,7 @@ const Top = () => {
                 aria-hidden="true"
               >
                 <path
-                  color="#fff"
+                  fill="#fff"
                   d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
                 ></path>
               </svg>
@@ -456,9 +456,9 @@ const SupportDB = () => {
         >
           Works with your favorite storage service
         </div>
-        <div className={clsx("row", juCss.gigahex_installer_container)}>
-          <div className={clsx("col col--12")} style={{ padding: 0 }}>
-            <ul className={clsx("tabs tabs--block", juCss.os_tabs_container)}>
+        <div className={clsx("row")}>
+          <div className={clsx("col col--12", ftuCss.supportdb_tabs_container)}>
+            <ul className={clsx("tabs tabs--block", ftuCss.supportdb_tab_tab)}>
               <li
                 className={clsx(
                   "tabs__item",

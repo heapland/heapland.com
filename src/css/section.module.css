@@ -318,9 +318,7 @@
   color: var(--palette-green);
   border-bottom-color: var(--palette-green);
 }
-:global(.tabs--block) {
-  margin-bottom: 40px;
-}
+
 :global(.tabs__item:hover) {
   color: var(--palette-green);
 }
